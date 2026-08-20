@@ -4,9 +4,8 @@ description: "Sand Beneath your Feet"
 publishedAt: 2021-02-07
 author: "Sarah Kababji"
 language: en
-draft: true
+draft: false
 ---
-
 # Sand Beneath your Feet
 
 I liberally rush out of our car towards the coastline. As I transition from the swarthy pavement to the sterling sand, I throw off my sandals - still running towards the coastline. Rushing towards the mighty setting sun. Racing the merciful wind. Resisting the pulling sand. Sand that is warning me from the dangers of the deep Mediterranean sea. Sand that is engulfing my feet with all its strength.

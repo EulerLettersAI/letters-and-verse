@@ -4,9 +4,8 @@ description: "Take me back to counting palm trees"
 publishedAt: 2021-11-29
 author: "Sarah Kababji"
 language: en
-draft: true
+draft: false
 ---
-
 # Take me back to counting palm trees
 
 I wake up to a dark hour at the crack of dawn. As you would expect in a treehouse, it smells like musty wood. The windows in the treehouse let in some of the rainfall overnight. I am not irritated, after all, this isn’t my treehouse. I can tell it was raining more so because the sound of the chirping birds are not as blaring.
