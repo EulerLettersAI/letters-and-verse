@@ -1,0 +1,23 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  date: Date;
+  href: string;
+  kind: string;
+}
+
+const { title, description, date, href, kind } = Astro.props;
+const formattedDate = new Intl.DateTimeFormat('ar-JO', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+}).format(date);
+---
+
+<article class="entry-card">
+  <p class="entry-kind">{kind}</p>
+  <h3><a href={href}>{title}</a></h3>
+  <p>{description}</p>
+  <time datetime={date.toISOString()}>{formattedDate}</time>
+</article>

@@ -1,0 +1,94 @@
+---
+import { getCollection } from 'astro:content';
+import EntryCard from '../components/EntryCard.astro';
+import SiteLayout from '../layouts/SiteLayout.astro';
+
+const byNewest = (a: { data: { publishedAt: Date } }, b: { data: { publishedAt: Date } }) =>
+  b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf();
+const articles = (await getCollection('articles', ({ data }) => !data.draft)).sort(byNewest);
+const poems = (await getCollection('poetry', ({ data }) => !data.draft)).sort(byNewest);
+const base = import.meta.env.BASE_URL;
+const isParked = articles.length === 0 && poems.length === 0;
+---
+
+<SiteLayout
+  title={isParked ? 'قريبًا | رسائل وقصائد' : undefined}
+  description={isParked ? 'مساحة عربية للرسائل والقصائد، تُطلق قريبًا.' : undefined}
+  parked={isParked}
+>
+  {isParked ? (
+    <section class="parking-page" aria-labelledby="parking-title">
+      <div class="parking-glow parking-glow-one" aria-hidden="true"></div>
+      <div class="parking-glow parking-glow-two" aria-hidden="true"></div>
+      <div class="parking-card">
+        <p class="eyebrow">Euler Letters AI</p>
+        <div class="parking-mark" aria-hidden="true">و</div>
+        <h1 id="parking-title">رسائل وقصائد</h1>
+        <p class="parking-lead">مساحة للكلمة العربية</p>
+        <span class="parking-rule" aria-hidden="true"></span>
+        <p class="parking-copy">نُعِدّ مكانًا للتأمل والمعرفة والشعر.<br />سنفتح أبوابه قريبًا.</p>
+        <p class="parking-status"><span aria-hidden="true"></span> قيد الإعداد</p>
+      </div>
+    </section>
+  ) : (
+    <>
+  <section class="hero">
+    <div class="shell">
+      <p class="eyebrow">Euler Letters AI</p>
+      <h1>رسائل وقصائد</h1>
+      <p class="hero-copy">مساحة للكلمة العربية؛ رسائل تتأمل في المعرفة والحياة، وقصائد تنصت إلى ما بينهما.</p>
+    </div>
+  </section>
+
+  <section class="content-section" id="letters">
+    <div class="section-heading">
+      <div>
+        <p class="kicker">Letters</p>
+        <h2>الرسائل</h2>
+      </div>
+      <span>{articles.length} {articles.length === 1 ? 'رسالة' : 'رسائل'}</span>
+    </div>
+    {articles.length > 0 ? (
+      <div class="entry-grid">
+        {articles.map((article) => (
+          <EntryCard
+            title={article.data.title}
+            description={article.data.description}
+            date={article.data.publishedAt}
+            href={`${base}articles/${article.id}/`}
+            kind="رسالة"
+          />
+        ))}
+      </div>
+    ) : (
+      <p class="empty-state">ستُنشر الرسالة الأولى قريبًا.</p>
+    )}
+  </section>
+
+  <section class="content-section" id="verse">
+    <div class="section-heading">
+      <div>
+        <p class="kicker">Verse</p>
+        <h2>القصائد</h2>
+      </div>
+      <span>{poems.length} {poems.length === 1 ? 'قصيدة' : 'قصائد'}</span>
+    </div>
+    {poems.length > 0 ? (
+      <div class="entry-grid">
+        {poems.map((poem) => (
+          <EntryCard
+            title={poem.data.title}
+            description={poem.data.description}
+            date={poem.data.publishedAt}
+            href={`${base}poetry/${poem.id}/`}
+            kind="قصيدة"
+          />
+        ))}
+      </div>
+    ) : (
+      <p class="empty-state">ستُنشر القصيدة الأولى قريبًا.</p>
+    )}
+  </section>
+    </>
+  )}
+</SiteLayout>

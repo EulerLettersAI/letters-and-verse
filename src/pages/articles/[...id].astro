@@ -1,0 +1,27 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection, render } from 'astro:content';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+
+export const getStaticPaths = (async () => {
+  const entries = await getCollection('articles', ({ data }) => !data.draft);
+  return entries.map((entry) => ({ params: { id: entry.id }, props: { entry } }));
+}) satisfies GetStaticPaths;
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const date = new Intl.DateTimeFormat('ar-JO', { dateStyle: 'long' }).format(entry.data.publishedAt);
+---
+
+<SiteLayout title={`${entry.data.title} | رسائل وقصائد`} description={entry.data.description} lang={entry.data.language}>
+  <article class="prose-shell">
+    <a class="back-link" href={import.meta.env.BASE_URL}>← جميع النصوص</a>
+    <header class="article-header">
+      <p class="kicker">رسالة</p>
+      <h1>{entry.data.title}</h1>
+      <p>{entry.data.description}</p>
+      <div class="article-meta"><span>{entry.data.author}</span><time datetime={entry.data.publishedAt.toISOString()}>{date}</time></div>
+    </header>
+    <div class="prose"><Content /></div>
+  </article>
+</SiteLayout>

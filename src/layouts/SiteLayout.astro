@@ -1,0 +1,57 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  lang?: 'ar' | 'en';
+  parked?: boolean;
+}
+
+const {
+  title = 'رسائل وقصائد | Euler Letters AI',
+  description = 'رسائل وقصائد عربية من Euler Letters AI.',
+  lang = 'ar',
+  parked = false,
+} = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const base = import.meta.env.BASE_URL;
+---
+
+<!doctype html>
+<html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="icon" href="https://eulerlettersai.github.io/assets/logo_transparent.png" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="https://eulerlettersai.github.io/" aria-label="Euler Letters AI home">
+          <img src="https://eulerlettersai.github.io/assets/logo_header.png" alt="Euler Letters AI" />
+        </a>
+        {!parked && (
+          <nav aria-label="التنقل الرئيسي">
+            <a href={base}>الرئيسية</a>
+            <a href={`${base}#letters`}>الرسائل</a>
+            <a href={`${base}#verse`}>القصائد</a>
+            <a href="https://eulerlettersai.github.io/math-to-code/">Math to Code</a>
+          </nav>
+        )}
+      </div>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <div class="footer-inner">
+        <span>© {new Date().getFullYear()} Euler Letters AI</span>
+        <a href="https://eulerlettersai.github.io/">الموقع الرئيسي</a>
+      </div>
+    </footer>
+  </body>
+</html>
