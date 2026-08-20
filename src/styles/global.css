@@ -129,7 +129,8 @@ h1, h2, h3 { color: var(--emerald-deep); line-height: 1.35; }
 .entry-card h3 a { text-decoration: none; }
 .entry-card h3 a:hover { color: var(--emerald); }
 .entry-card p:not(.entry-kind) { margin: 0 0 1rem; color: var(--muted); }
-.entry-card time { color: var(--muted); font-size: .9rem; }
+.entry-card .entry-meta { display: flex; align-items: baseline; gap: .45rem; margin: 0; color: var(--muted); font-size: .9rem; }
+.entry-card .entry-meta strong { color: var(--ink); font-weight: 700; }
 .empty-state { padding: 2.5rem; color: var(--muted); text-align: center; background: var(--mint); border: 1px dashed #a9cdbb; border-radius: 1rem; }
 .prose-shell { max-width: 780px; padding-block: 3.5rem 6rem; }
 .back-link { color: var(--emerald); font-weight: 700; text-decoration: none; }

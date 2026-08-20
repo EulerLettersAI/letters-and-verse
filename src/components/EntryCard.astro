@@ -3,11 +3,12 @@ interface Props {
   title: string;
   description: string;
   date: Date;
+  author: string;
   href: string;
   kind: string;
 }
 
-const { title, description, date, href, kind } = Astro.props;
+const { title, description, date, author, href, kind } = Astro.props;
 const formattedDate = new Intl.DateTimeFormat('ar-JO', {
   year: 'numeric',
   month: 'long',
@@ -19,5 +20,9 @@ const formattedDate = new Intl.DateTimeFormat('ar-JO', {
   <p class="entry-kind">{kind}</p>
   <h3><a href={href}>{title}</a></h3>
   <p>{description}</p>
-  <time datetime={date.toISOString()}>{formattedDate}</time>
+  <p class="entry-meta">
+    <strong>بقلم {author}</strong>
+    <span aria-hidden="true">·</span>
+    <time datetime={date.toISOString()}>{formattedDate}</time>
+  </p>
 </article>

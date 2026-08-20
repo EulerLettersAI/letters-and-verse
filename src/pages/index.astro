@@ -24,7 +24,6 @@ const isParked = articles.length === 0 && poems.length === 0;
         <p class="eyebrow">Euler Letters AI</p>
         <div class="parking-mark" aria-hidden="true">و</div>
         <h1 id="parking-title">رسائل وقصائد</h1>
-        <p class="parking-lead">مساحة للكلمة العربية</p>
         <span class="parking-rule" aria-hidden="true"></span>
         <p class="parking-copy">نُعِدّ مكانًا للتأمل والمعرفة والشعر.<br />سنفتح أبوابه قريبًا.</p>
         <p class="parking-status"><span aria-hidden="true"></span> قيد الإعداد</p>
@@ -36,7 +35,7 @@ const isParked = articles.length === 0 && poems.length === 0;
     <div class="shell">
       <p class="eyebrow">Euler Letters AI</p>
       <h1>رسائل وقصائد</h1>
-      <p class="hero-copy">مساحة للكلمة العربية؛ رسائل تتأمل في المعرفة والحياة، وقصائد تنصت إلى ما بينهما.</p>
+      <p class="hero-copy">رسائل تتأمل في المعرفة والحياة، وقصائد تنصت إلى ما بينهما.</p>
     </div>
   </section>
 
@@ -55,6 +54,7 @@ const isParked = articles.length === 0 && poems.length === 0;
             title={article.data.title}
             description={article.data.description}
             date={article.data.publishedAt}
+            author={article.data.author}
             href={`${base}articles/${article.id}/`}
             kind="رسالة"
           />
@@ -80,6 +80,7 @@ const isParked = articles.length === 0 && poems.length === 0;
             title={poem.data.title}
             description={poem.data.description}
             date={poem.data.publishedAt}
+            author={poem.data.author}
             href={`${base}poetry/${poem.id}/`}
             kind="قصيدة"
           />
