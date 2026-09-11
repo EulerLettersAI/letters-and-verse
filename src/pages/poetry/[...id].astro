@@ -2,6 +2,7 @@
 import type { GetStaticPaths } from 'astro';
 import { getCollection, render } from 'astro:content';
 import SiteLayout from '../../layouts/SiteLayout.astro';
+import AuthorLink from '../../components/AuthorLink.astro';
 
 export const getStaticPaths = (async () => {
   const entries = await getCollection('poetry', ({ data }) => !data.draft);
@@ -20,7 +21,7 @@ const date = new Intl.DateTimeFormat('ar-JO', { dateStyle: 'long' }).format(entr
       <p class="kicker">{entry.data.form ?? 'قصيدة'}</p>
       <h1>{entry.data.title}</h1>
       <p>{entry.data.description}</p>
-      <div class="article-meta"><span>{entry.data.author}</span><time datetime={entry.data.publishedAt.toISOString()}>{date}</time></div>
+      <div class="article-meta"><AuthorLink author={entry.data.author} /><time datetime={entry.data.publishedAt.toISOString()}>{date}</time></div>
     </header>
     <div class="prose poem"><Content /></div>
   </article>

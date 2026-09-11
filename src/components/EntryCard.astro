@@ -1,4 +1,6 @@
 ---
+import AuthorLink from './AuthorLink.astro';
+
 interface Props {
   title: string;
   description: string;
@@ -6,22 +8,23 @@ interface Props {
   author: string;
   href: string;
   kind: string;
+  language: 'ar' | 'en';
 }
 
-const { title, description, date, author, href, kind } = Astro.props;
-const formattedDate = new Intl.DateTimeFormat('ar-JO', {
+const { title, description, date, author, href, kind, language } = Astro.props;
+const formattedDate = new Intl.DateTimeFormat(language === 'ar' ? 'ar-JO' : 'en-GB', {
   year: 'numeric',
   month: 'long',
   day: 'numeric',
 }).format(date);
 ---
 
-<article class="entry-card">
+<article class="entry-card" lang={language} dir={language === 'ar' ? 'rtl' : 'ltr'}>
   <p class="entry-kind">{kind}</p>
-  <h3><a href={href}>{title}</a></h3>
+  <h4><a href={href}>{title}</a></h4>
   <p>{description}</p>
   <p class="entry-meta">
-    <strong>بقلم {author}</strong>
+    <strong>{language === 'ar' ? 'بقلم' : 'By'} <AuthorLink author={author} /></strong>
     <span aria-hidden="true">·</span>
     <time datetime={date.toISOString()}>{formattedDate}</time>
   </p>

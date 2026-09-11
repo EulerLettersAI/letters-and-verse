@@ -1,0 +1,20 @@
+---
+interface Props {
+  author: string;
+}
+
+const { author } = Astro.props;
+const profiles: Record<string, string> = {
+  'Sarah Kababji': 'https://www.linkedin.com/in/sarahkababji/',
+  'Samer Kababji': 'https://www.linkedin.com/in/samer-el-kababji-92906251/',
+  'Samer El Kababji': 'https://www.linkedin.com/in/samer-el-kababji-92906251/',
+};
+const href = profiles[author];
+---
+
+{href ? <a href={href} class="author-link"><bdi>{author}</bdi></a> : <bdi>{author}</bdi>}
+
+<style>
+  .author-link { text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: .2em; }
+  .author-link:hover, .author-link:focus-visible { color: var(--emerald); text-decoration-color: currentColor; }
+</style>

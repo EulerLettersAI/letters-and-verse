@@ -12,7 +12,6 @@ const {
   title = 'رسائل وقصائد | Euler Letters AI',
   description = 'رسائل وقصائد عربية من Euler Letters AI.',
   lang = 'ar',
-  parked = false,
 } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const base = import.meta.env.BASE_URL;
@@ -29,21 +28,49 @@ const base = import.meta.env.BASE_URL;
     <title>{title}</title>
   </head>
   <body>
-    <header class="site-header">
-      <div class="header-inner">
-        <a class="brand" href="https://eulerlettersai.github.io/" aria-label="Euler Letters AI home">
-          <img src="https://eulerlettersai.github.io/assets/logo_header.png" alt="Euler Letters AI" />
-        </a>
-        {!parked && (
-          <nav aria-label="التنقل الرئيسي">
-            <a href={base}>الرئيسية</a>
-            <a href={`${base}#letters`}>الرسائل</a>
-            <a href={`${base}#verse`}>القصائد</a>
-            <a href="https://eulerlettersai.github.io/math-to-code/">Math to Code</a>
-          </nav>
-        )}
-      </div>
+    <header class="site-header" lang="en" dir="ltr">
+        <div class="header-inner">
+            <a class="brand" href="https://eulerlettersai.github.io/index.html#top" aria-label="Euler Letters AI Home">
+                <img class="brand-mark" src="https://eulerlettersai.github.io/assets/logo_header.png" alt="Euler Letters AI logo" />
+            </a>
+
+            <nav class="nav" id="main-nav" aria-label="Main navigation">
+                <a href="https://eulerlettersai.github.io/index.html#introduction">Introduction</a>
+                <a href="https://eulerlettersai.github.io/index.html#lead-profile">Lead</a>
+                <a href="https://eulerlettersai.github.io/publications.html">Publications</a>
+                <a href="https://eulerlettersai.github.io/projects.html">Projects</a>
+                <a href="https://eulerlettersai.github.io/math-to-code/" target="_blank" rel="noopener noreferrer">Math to Code</a>
+                <a href={base} aria-current="page">Letters &amp; Verse</a>
+                <a href="https://eulerlettersai.github.io/light-and-lens/" target="_blank" rel="noopener noreferrer">Light &amp; Lens</a>
+                <a href="https://eulerlettersai.github.io/index.html#references">References</a>
+                <a class="nav-cta" href="https://eulerlettersai.github.io/index.html#contact">Contact</a>
+            </nav>
+            <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </header>
+    <script>
+      const toggle = document.querySelector<HTMLButtonElement>('#nav-toggle');
+      const nav = document.querySelector<HTMLElement>('#main-nav');
+      if (toggle && nav) {
+        const closeMenu = () => {
+          nav.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        };
+        toggle.addEventListener('click', () => {
+          const open = nav.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', String(open));
+        });
+        nav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+        nav.addEventListener('keydown', event => {
+          if (event.key === 'Escape') {
+            closeMenu();
+            toggle.focus();
+          }
+        });
+      }
+    </script>
     <main>
       <slot />
     </main>
