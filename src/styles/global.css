@@ -267,12 +267,14 @@ h1, h2, h3 { color: var(--emerald-deep); line-height: 1.35; }
 .entry-card .entry-meta strong { color: var(--ink); font-weight: 700; }
 .empty-state { padding: 2.5rem; color: var(--muted); text-align: center; background: var(--mint); border: 1px dashed var(--line); border-radius: 1rem; }
 .prose-shell { max-width: 960px; padding-block: 3.5rem 6rem; }
+.prose-shell::after { content: ''; display: block; clear: both; }
 .back-link { width: min(100%, 780px); display: block; margin-inline: auto; color: var(--emerald); font-weight: 700; text-decoration: none; }
 .article-header { max-width: 780px; margin: 2rem auto 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--line); }
 .article-header h1 { margin: .3rem 0 .6rem; font-size: clamp(2.4rem, 8vw, 4.5rem); }
 .article-header > p:not(.kicker) { color: var(--muted); }
 .article-meta { display: flex; gap: 1.5rem; color: var(--muted); font-size: .95rem; }
-.entry-cover { overflow: hidden; margin: 0 0 3.25rem; background: var(--mint); border: 1px solid var(--line); border-radius: 1.25rem; box-shadow: var(--shadow); }
+.entry-cover { width: min(100%, 560px); overflow: hidden; margin: 0 auto 2.5rem; background: var(--mint); border: 1px solid var(--line); border-radius: 1.25rem; box-shadow: var(--shadow); }
+.prose-shell:not(.poem-page) > .entry-cover { width: min(42%, 360px); float: inline-start; margin: .35rem 0 1.5rem; margin-inline-end: 2rem; shape-outside: inset(0 round 1.25rem); shape-margin: .25rem; }
 .entry-cover img { width: 100%; height: auto; display: block; aspect-ratio: 3 / 2; object-fit: cover; }
 .prose { max-width: 780px; margin-inline: auto; font-size: 1.25rem; }
 .prose h2 { margin-top: 2.5rem; }
@@ -286,6 +288,7 @@ footer { color: var(--muted); background: var(--mint); border-top: 1px solid var
 .footer-inner a { color: var(--emerald); }
 @media (max-width: 700px) {
   .article-meta, .footer-inner { flex-direction: column; gap: .2rem; }
+  .prose-shell:not(.poem-page) > .entry-cover { width: min(100%, 520px); float: none; margin: 0 auto 2rem; shape-outside: none; }
 }
 
 .language-group + .language-group { margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--line); }
