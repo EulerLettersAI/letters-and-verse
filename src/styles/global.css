@@ -288,9 +288,14 @@ h1, h2, h3 { color: var(--emerald-deep); line-height: 1.35; }
 .poem { font-size: 1.4rem; line-height: 2.35; }
 .poem h3 { margin: 4.5rem 0 1.25rem; color: var(--gold); font-size: clamp(1.75rem, 4vw, 2.15rem); font-weight: 700; }
 .memorial-poem { max-width: 900px; }
-.elegy-verses { margin: 0; padding: 0; list-style: none; counter-reset: verse; font-size: clamp(1.1rem, 2vw, 1.3rem); }
-.elegy-verses > li { display: grid; grid-template-columns: 2.75rem minmax(0, 1fr); align-items: center; gap: 1rem; margin-block: .8rem; counter-increment: verse; }
-.elegy-verses > li::before { content: counter(verse); padding-inline-end: .75rem; color: var(--gold); border-inline-end: 1px solid var(--line); font-size: .8rem; font-variant-numeric: tabular-nums; line-height: 1.4; text-align: center; }
+.elegy-verses, .verse-notes { margin: 0; padding: 0; list-style: none; }
+.elegy-verses { font-size: clamp(1.1rem, 2vw, 1.3rem); }
+.elegy-verses > li, .verse-notes > li { display: grid; grid-template-columns: 2.75rem minmax(0, 1fr); gap: 1rem; scroll-margin-top: 7rem; }
+.elegy-verses > li { align-items: center; margin-block: .8rem; }
+.verse-notes > li { align-items: start; margin-block: .9rem; }
+.verse-number { display: block; align-self: stretch; padding-inline-end: .75rem; color: var(--gold); border-inline-end: 1px solid var(--line); font-family: 'EB Garamond', Georgia, 'Times New Roman', serif; font-size: .9rem; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1.55; text-align: center; text-decoration: none; }
+.verse-number-link { text-decoration: underline; text-decoration-style: dotted; text-underline-offset: .2em; transition: color .18s ease, background-color .18s ease; }
+.verse-number-link:hover, .verse-number-link:focus-visible { color: var(--emerald); background: rgba(40, 201, 135, .08); outline: 1px solid rgba(40, 201, 135, .35); outline-offset: 2px; }
 .bayt { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: baseline; gap: clamp(.75rem, 2vw, 1.35rem); }
 .hemistich { text-align: center; }
 .verse-divider { color: var(--gold); font-size: .55em; opacity: .8; }
@@ -304,7 +309,7 @@ footer { color: var(--muted); background: var(--mint); border-top: 1px solid var
 @media (max-width: 700px) {
   .article-meta, .footer-inner { flex-direction: column; gap: .2rem; }
   .article-prose > .entry-cover { width: min(100%, 520px); float: none; margin: 0 auto 2rem; shape-outside: none; }
-  .elegy-verses > li { grid-template-columns: 2rem minmax(0, 1fr); gap: .65rem; }
+  .elegy-verses > li, .verse-notes > li { grid-template-columns: 2rem minmax(0, 1fr); gap: .65rem; }
   .bayt { grid-template-columns: 1fr; gap: .1rem; }
   .verse-divider { width: 2.25rem; height: 1px; margin: .2rem auto; overflow: hidden; background: var(--gold); opacity: .55; }
 }
