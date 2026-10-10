@@ -15,6 +15,7 @@ interface Props {
 
 const { title, description, date, author, href, kind, language, cover, coverAlt } = Astro.props;
 const coverSmall = cover?.replace(/\.webp$/, '-768.webp');
+const showDescription = description.trim() !== title.trim();
 const formattedDate = new Intl.DateTimeFormat(language === 'ar' ? 'ar-JO' : 'en-GB', {
   year: 'numeric',
   month: 'long',
@@ -40,7 +41,7 @@ const formattedDate = new Intl.DateTimeFormat(language === 'ar' ? 'ar-JO' : 'en-
   <div class="entry-card-body">
     <p class="entry-kind">{kind}</p>
     <h4><a href={href}>{title}</a></h4>
-    <p>{description}</p>
+    {showDescription && <p>{description}</p>}
     <p class="entry-meta">
       <strong>{language === 'ar' ? 'بقلم' : 'By'} <AuthorLink author={author} /></strong>
       <span aria-hidden="true">·</span>
