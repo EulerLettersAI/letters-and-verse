@@ -310,8 +310,10 @@ footer { color: var(--muted); background: var(--mint); border-top: 1px solid var
 @media (max-width: 700px) {
   .article-meta, .footer-inner { flex-direction: column; gap: .2rem; }
   .article-prose > .entry-cover { width: min(100%, 520px); float: none; margin: 0 auto 2rem; shape-outside: none; }
+  .elegy-verses > li { margin-block: 0; padding-block: 1.15rem; }
+  .elegy-verses > li + li { border-top: 1px solid var(--line); }
   .bayt { grid-template-columns: 1fr; gap: .1rem; }
-  .verse-divider { width: 2.25rem; height: 1px; margin: .2rem auto; overflow: hidden; background: var(--gold); opacity: .55; }
+  .verse-divider { width: 1.5rem; height: 0; margin: .35rem auto; overflow: hidden; color: transparent; background: none; border-top: 2px dotted var(--gold); opacity: .65; }
   .verse-explanation { width: min(34rem, calc(100vw - 2.25rem)); font-size: .9rem; }
 }
 
