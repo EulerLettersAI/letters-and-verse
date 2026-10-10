@@ -6,14 +6,19 @@ interface Props {
   description?: string;
   lang?: 'ar' | 'en';
   parked?: boolean;
+  image?: string;
+  type?: 'website' | 'article';
 }
 
 const {
   title = 'رسائل وقصائد | Euler Letters AI',
   description = 'رسائل وقصائد عربية من Euler Letters AI.',
   lang = 'ar',
+  image,
+  type = 'website',
 } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImageURL = image ? new URL(image, Astro.site) : undefined;
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -26,6 +31,13 @@ const base = import.meta.env.BASE_URL;
     <link rel="canonical" href={canonicalURL} />
     <link rel="icon" href="https://eulerlettersai.github.io/assets/logo_transparent.png" />
     <title>{title}</title>
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalURL} />
+    {socialImageURL && <meta property="og:image" content={socialImageURL} />}
+    {socialImageURL && <meta name="twitter:card" content="summary_large_image" />}
+    {socialImageURL && <meta name="twitter:image" content={socialImageURL} />}
   </head>
   <body>
     <header class="site-header" lang="en" dir="ltr">

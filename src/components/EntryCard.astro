@@ -9,9 +9,12 @@ interface Props {
   href: string;
   kind: string;
   language: 'ar' | 'en';
+  cover?: string;
+  coverAlt?: string;
 }
 
-const { title, description, date, author, href, kind, language } = Astro.props;
+const { title, description, date, author, href, kind, language, cover, coverAlt } = Astro.props;
+const coverSmall = cover?.replace(/\.webp$/, '-768.webp');
 const formattedDate = new Intl.DateTimeFormat(language === 'ar' ? 'ar-JO' : 'en-GB', {
   year: 'numeric',
   month: 'long',
@@ -20,12 +23,28 @@ const formattedDate = new Intl.DateTimeFormat(language === 'ar' ? 'ar-JO' : 'en-
 ---
 
 <article class="entry-card" lang={language} dir={language === 'ar' ? 'rtl' : 'ltr'}>
-  <p class="entry-kind">{kind}</p>
-  <h4><a href={href}>{title}</a></h4>
-  <p>{description}</p>
-  <p class="entry-meta">
-    <strong>{language === 'ar' ? 'بقلم' : 'By'} <AuthorLink author={author} /></strong>
-    <span aria-hidden="true">·</span>
-    <time datetime={date.toISOString()}>{formattedDate}</time>
-  </p>
+  {cover && (
+    <div class="entry-card-media">
+      <img
+        src={cover}
+        srcset={coverSmall ? `${coverSmall} 768w, ${cover} 1536w` : undefined}
+        sizes="(max-width: 650px) calc(100vw - 44px), (max-width: 1000px) 50vw, 360px"
+        alt={coverAlt ?? ''}
+        width="1536"
+        height="1024"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+  )}
+  <div class="entry-card-body">
+    <p class="entry-kind">{kind}</p>
+    <h4><a href={href}>{title}</a></h4>
+    <p>{description}</p>
+    <p class="entry-meta">
+      <strong>{language === 'ar' ? 'بقلم' : 'By'} <AuthorLink author={author} /></strong>
+      <span aria-hidden="true">·</span>
+      <time datetime={date.toISOString()}>{formattedDate}</time>
+    </p>
+  </div>
 </article>

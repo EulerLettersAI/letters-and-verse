@@ -9,6 +9,10 @@ const commonSchema = z.object({
   author: z.string().default('Samer El Kababji'),
   language: z.enum(['ar', 'en']).default('ar'),
   draft: z.boolean().default(false),
+  cover: z.object({
+    src: z.string(),
+    alt: z.string(),
+  }).optional(),
 });
 
 const articles = defineCollection({

@@ -12,9 +12,17 @@ export const getStaticPaths = (async () => {
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 const date = new Intl.DateTimeFormat('ar-JO', { dateStyle: 'long' }).format(entry.data.publishedAt);
+const coverSrc = entry.data.cover ? `${import.meta.env.BASE_URL}${entry.data.cover.src}` : undefined;
+const coverSrcSmall = coverSrc?.replace(/\.webp$/, '-768.webp');
 ---
 
-<SiteLayout title={`${entry.data.title} | رسائل وقصائد`} description={entry.data.description} lang={entry.data.language}>
+<SiteLayout
+  title={`${entry.data.title} | رسائل وقصائد`}
+  description={entry.data.description}
+  lang={entry.data.language}
+  image={coverSrc}
+  type="article"
+>
   <article class="prose-shell poem-page">
     <a class="back-link" href={import.meta.env.BASE_URL}>← جميع النصوص</a>
     <header class="article-header">
@@ -23,6 +31,21 @@ const date = new Intl.DateTimeFormat('ar-JO', { dateStyle: 'long' }).format(entr
       <p>{entry.data.description}</p>
       <div class="article-meta"><AuthorLink author={entry.data.author} /><time datetime={entry.data.publishedAt.toISOString()}>{date}</time></div>
     </header>
+    {coverSrc && entry.data.cover && (
+      <figure class="entry-cover">
+        <img
+          src={coverSrc}
+          srcset={coverSrcSmall ? `${coverSrcSmall} 768w, ${coverSrc} 1536w` : undefined}
+          sizes="(max-width: 1000px) calc(100vw - 44px), 960px"
+          alt={entry.data.cover.alt}
+          width="1536"
+          height="1024"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+        />
+      </figure>
+    )}
     <div class="prose poem"><Content /></div>
   </article>
 </SiteLayout>

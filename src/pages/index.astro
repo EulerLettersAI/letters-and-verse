@@ -64,6 +64,8 @@ const isParked = articles.length === 0 && poems.length === 0;
                   href={`${base}articles/${article.id}/`}
                   language={language}
                   kind={language === 'ar' ? 'رسالة' : 'Article'}
+                  cover={article.data.cover ? `${base}${article.data.cover.src}` : undefined}
+                  coverAlt={article.data.cover?.alt}
                 />
               ))}
             </div>
@@ -99,6 +101,8 @@ const isParked = articles.length === 0 && poems.length === 0;
                   href={`${base}poetry/${poem.id}/`}
                   language={language}
                   kind={language === 'ar' ? 'قصيدة' : 'Poem'}
+                  cover={poem.data.cover ? `${base}${poem.data.cover.src}` : undefined}
+                  coverAlt={poem.data.cover?.alt}
                 />
               ))}
             </div>

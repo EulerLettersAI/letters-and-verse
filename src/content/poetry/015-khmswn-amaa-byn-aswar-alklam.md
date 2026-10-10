@@ -5,9 +5,10 @@ publishedAt: 2020-03-01
 author: "Samer Kababji"
 language: ar
 draft: false
+cover:
+  src: "images/covers/015-khmswn-amaa-byn-aswar-alklam.webp"
+  alt: "درويش وحيد وسط متاهة من الأوراق والمرايا والأقنعة يتجه نحو باب مضيء"
 ---
-# خمسون عاماً بين أسوار الكلامْ
-
 ### (شهود)
 
 خمسون عاماً بين أسوار الكلامْ
