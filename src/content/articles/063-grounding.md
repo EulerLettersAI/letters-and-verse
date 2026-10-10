@@ -7,8 +7,6 @@ language: en
 draft: true
 ---
 
-# Grounding
-
 [ ](images/Aisha/Grounding.mp4)
 
 In a world of thumping, racing and crashing, you are my haven. Your tiny body connects me to a realm of innocence. Embracing you feels like embracing truth - a rarity we have these days in a world full of lies and deception. Truth in your sounds, truth in your eyes, and truth in your gestures radiates from your body just like sun rays.

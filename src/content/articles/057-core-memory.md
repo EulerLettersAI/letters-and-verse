@@ -7,8 +7,6 @@ language: en
 draft: true
 ---
 
-# Core Memory
-
 ![abdoun home](/images/Aisha/abdoun_home.jpg)
 
 I am racing. I am racing against the blood in my veins as my heart pumps faster. I fetch my sisters. Come on! Mama said yes!! My sisters quickly slip on their little sandals. We’re all giggling. I am wearing my new bracelet today. I look at it proudly. I wonder if she’ll notice it and compliment it. The confidence and certainty, that she will, is reflected through my smile. I look at my little brother. He’s going to slow us down. I carry him. My sisters run before me.

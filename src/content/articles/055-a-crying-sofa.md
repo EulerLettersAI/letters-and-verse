@@ -6,8 +6,6 @@ author: "Sarah Kababji"
 language: en
 draft: false
 ---
-# A crying sofa
-
 On the many occasions where I visited a country for a vacation, I always have the urge to visit the old part of the city to view old apartments, old homes, and my favorite - old Victorian or Gothic mansions. Even when I drive by the old south of London - Ontario, I get the shivers. My mom knows. I inherited this interest from her.
 
 <!--more-->
