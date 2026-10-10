@@ -11,51 +11,31 @@ cover:
   alt: "لوحة تذكارية مقرّبة لسيدة مسنّة بوشاح خمري تمسك وردة وردية وتحيط بها عتمة متدرجة"
 ---
 
-1) الدمعُ أجمدُ في العينينِ مِنْ حَجَرِ....جفّتْ منابعهُ أمْ ضلَّ في السَفَرِ !
-
-2) يا جذوةَ العيشِ يا إسفارَ كلِّ غدٍ... ماذا تُخبّئُ في عَطْفيْكَ مِنْ عِبَرِ!
-
-3) دهرٌ يُقلّبنُا في كلِّ ناحيـةٍ.......... فلا نَقِرُّ سوى في نعْشِ مُحتَضرِ
-
-4) أخنى الزمانُ أمِ الأطماعُ مُسْبِلةٌ.......ثوبَ الشقاءِ علينا دونما خَفَرِ !
-
-5) أكلّما حظيتْ نفسٌ بِغايتِها ......... حتى اشرأبّتْ بِلا عقلٍ إلى أُخَرِ !
-
-6) و قدْ علمنا بأنَّ الدارَ فانيةٌ............. و أننا بُلْغةُ الديدانِ و الحَشَرِ
-
-7) و مِنْ عجائبِ هذا الكونِ أنْ عُمِرتْ.. أركانهُ بِرَحى الأضدادِ في البَشَرِ
-
-8) لولا التفاخرُ بينَ الناسِ لانهدمتْ..أركانُ مَجدٍ و غاضَ العِلمُ في الحُفَرِ
-
-9) و عينُ مجدِكَ في دنياكَ مَهْلَكةٌ.......... يومَ انكشافكَ فرداً مُعْدَمَ الوَزَرِ
-
-10) هلّا قنعتَ بما سار َالقضاءُ به........... و كُنْتَ حيثُ أُقِمتَ مُسلِمَ القَدَرِ
-
-11) فما ارتحالُكَ عَنْ أُمٍّ تلوذُ بها!............... و مااختيارُكَ مجبوراً بمُنجبرِ
-
-12) ها قد أتيتُكِ يا أمّاه مُحْتَملاً........ صبرَ السنينِ على اللأواءِ و الضَجَرِ
-
-13) جدرانُ بَيتِكِ في عبدونَ باكيةٌ .. و باحةُ البابِ حينَ العصرِ في حَصَرِ
-
-14) للهِ درُّكِ كَمْ واسيتِ منقطعاً ........... ببسمةٍ صَدحَتْ في هَدأةِ السَمَرِ
-
-15) إنْ رامَ بابَكِ مسكينٌ بَذلْتِ لهُ............ طبعاً بلا كَلَفٍ صَفْواً بلا كَدَرِ
-
-16) حتّى اْبتُلِيتِ بأدواءٍ فكانَ لها .......... .سَهمُ اصطبارِكِ مشدوداً إلى وَتَرِ
-
-17) و قدْ حَداني لأنْ آتيْ على عَجَلٍ ............. لُطْفُ الإلهِ بلا تدبيرِ مُفتَقرِ
-
-18) ما برَّدَ القلبَ إلا ما هَمَستِ به ............. (إنّي أُحبّكَ) والفُتّانُ في حِيَرِ
-
-19) كَمْ خابَ حُسّادٌ و أخْفقَ سَعيُهمْ ..... سلامةُ الصَّدرِ فوقَ الكيدِ و النّظَرِ
-
-20) وقلتِ باسِمةً (أنتَ الحَنونُ) فلم ... أسعدْ كذاك مدى الأيَّامِ في عُمُري
-
-21) حتّى إذا أسلمتِ الروحَ راضيةً .... أسْكنتُكِ اللّحْدَ سُكنى الحقِّ لا الغَرَرِ
-
-22) ثمَّ انكفأتُ على نفسي أعلّلُها .......  بأنَّ عادتَيَ التّرحالُ مِنْ صِغَري
-
-23) فالعينُ هاميَةٌ و الروحُ خاشعةٌ........ و النفسُ راجيةٌ غفرانَ مُقتدرِ
+<ol class="elegy-verses">
+  <li><span class="bayt"><span class="hemistich">الدمعُ أجمدُ في العينينِ مِنْ حَجَرِ</span><span class="verse-divider" aria-hidden="true">◆</span><span class="hemistich">جفّتْ منابعهُ أمْ ضلَّ في السَفَرِ!</span></span></li>
+  <li><span class="bayt"><span class="hemistich">يا جذوةَ العيشِ يا إسفارَ كلِّ غدٍ</span><span class="verse-divider" aria-hidden="true">◆</span><span class="hemistich">ماذا تُخبّئُ في عَطْفيْكَ مِنْ عِبَرِ!</span></span></li>
+  <li><span class="bayt"><span class="hemistich">دهرٌ يُقلّبنُا في كلِّ ناحيـةٍ</span><span class="verse-divider" aria-hidden="true">◆</span><span class="hemistich">فلا نَقِرُّ سوى في نعْشِ مُحتَضرِ</span></span></li>
+  <li><span class="bayt"><span class="hemistich">أخنى الزمانُ أمِ الأطماعُ مُسْبِلةٌ</span><span class="verse-divider" aria-hidden="true">◆</span><span class="hemistich">ثوبَ الشقاءِ علينا دونما خَفَرِ!</span></span></li>
+  <li><span class="bayt"><span class="hemistich">أكلّما حظيتْ نفسٌ بِغايتِها</span><span class="verse-divider" aria-hidden="true">◆</span><span class="hemistich">حتى اشرأبّتْ بِلا عقلٍ إلى أُخَرِ!</span></span></li>
+  <li><span class="bayt"><span class="hemistich">و قدْ علمنا بأنَّ الدارَ فانيةٌ</span><span class="verse-divider" aria-hidden="true">◆</span><span class="hemistich">و أننا بُلْغةُ الديدانِ و الحَشَرِ</span></span></li>
+  <li><span class="bayt"><span class="hemistich">و مِنْ عجائبِ هذا الكونِ أنْ عُمِرتْ</span><span class="verse-divider" aria-hidden="true">◆</span><span class="hemistich">أركانهُ بِرَحى الأضدادِ في البَشَرِ</span></span></li>
+  <li><span class="bayt"><span class="hemistich">لولا التفاخرُ بينَ الناسِ لانهدمتْ</span><span class="verse-divider" aria-hidden="true">◆</span><span class="hemistich">أركانُ مَجدٍ و غاضَ العِلمُ في الحُفَرِ</span></span></li>
+  <li><span class="bayt"><span class="hemistich">و عينُ مجدِكَ في دنياكَ مَهْلَكةٌ</span><span class="verse-divider" aria-hidden="true">◆</span><span class="hemistich">يومَ انكشافكَ فرداً مُعْدَمَ الوَزَرِ</span></span></li>
+  <li><span class="bayt"><span class="hemistich">هلّا قنعتَ بما سار َالقضاءُ به</span><span class="verse-divider" aria-hidden="true">◆</span><span class="hemistich">و كُنْتَ حيثُ أُقِمتَ مُسلِمَ القَدَرِ</span></span></li>
+  <li><span class="bayt"><span class="hemistich">فما ارتحالُكَ عَنْ أُمٍّ تلوذُ بها!</span><span class="verse-divider" aria-hidden="true">◆</span><span class="hemistich">و مااختيارُكَ مجبوراً بمُنجبرِ</span></span></li>
+  <li><span class="bayt"><span class="hemistich">ها قد أتيتُكِ يا أمّاه مُحْتَملاً</span><span class="verse-divider" aria-hidden="true">◆</span><span class="hemistich">صبرَ السنينِ على اللأواءِ و الضَجَرِ</span></span></li>
+  <li><span class="bayt"><span class="hemistich">جدرانُ بَيتِكِ في عبدونَ باكيةٌ</span><span class="verse-divider" aria-hidden="true">◆</span><span class="hemistich">و باحةُ البابِ حينَ العصرِ في حَصَرِ</span></span></li>
+  <li><span class="bayt"><span class="hemistich">للهِ درُّكِ كَمْ واسيتِ منقطعاً</span><span class="verse-divider" aria-hidden="true">◆</span><span class="hemistich">ببسمةٍ صَدحَتْ في هَدأةِ السَمَرِ</span></span></li>
+  <li><span class="bayt"><span class="hemistich">إنْ رامَ بابَكِ مسكينٌ بَذلْتِ لهُ</span><span class="verse-divider" aria-hidden="true">◆</span><span class="hemistich">طبعاً بلا كَلَفٍ صَفْواً بلا كَدَرِ</span></span></li>
+  <li><span class="bayt"><span class="hemistich">حتّى اْبتُلِيتِ بأدواءٍ فكانَ لها</span><span class="verse-divider" aria-hidden="true">◆</span><span class="hemistich">سَهمُ اصطبارِكِ مشدوداً إلى وَتَرِ</span></span></li>
+  <li><span class="bayt"><span class="hemistich">و قدْ حَداني لأنْ آتيْ على عَجَلٍ</span><span class="verse-divider" aria-hidden="true">◆</span><span class="hemistich">لُطْفُ الإلهِ بلا تدبيرِ مُفتَقرِ</span></span></li>
+  <li><span class="bayt"><span class="hemistich">ما برَّدَ القلبَ إلا ما هَمَستِ به</span><span class="verse-divider" aria-hidden="true">◆</span><span class="hemistich">(إنّي أُحبّكَ) والفُتّانُ في حِيَرِ</span></span></li>
+  <li><span class="bayt"><span class="hemistich">كَمْ خابَ حُسّادٌ و أخْفقَ سَعيُهمْ</span><span class="verse-divider" aria-hidden="true">◆</span><span class="hemistich">سلامةُ الصَّدرِ فوقَ الكيدِ و النّظَرِ</span></span></li>
+  <li><span class="bayt"><span class="hemistich">وقلتِ باسِمةً (أنتَ الحَنونُ) فلم</span><span class="verse-divider" aria-hidden="true">◆</span><span class="hemistich">أسعدْ كذاك مدى الأيَّامِ في عُمُري</span></span></li>
+  <li><span class="bayt"><span class="hemistich">حتّى إذا أسلمتِ الروحَ راضيةً</span><span class="verse-divider" aria-hidden="true">◆</span><span class="hemistich">أسْكنتُكِ اللّحْدَ سُكنى الحقِّ لا الغَرَرِ</span></span></li>
+  <li><span class="bayt"><span class="hemistich">ثمَّ انكفأتُ على نفسي أعلّلُها</span><span class="verse-divider" aria-hidden="true">◆</span><span class="hemistich">بأنَّ عادتَيَ التّرحالُ مِنْ صِغَري</span></span></li>
+  <li><span class="bayt"><span class="hemistich">فالعينُ هاميَةٌ و الروحُ خاشعةٌ</span><span class="verse-divider" aria-hidden="true">◆</span><span class="hemistich">و النفسُ راجيةٌ غفرانَ مُقتدرِ</span></span></li>
+</ol>
 
 ---
 

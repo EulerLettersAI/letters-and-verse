@@ -287,9 +287,13 @@ h1, h2, h3 { color: var(--emerald-deep); line-height: 1.35; }
 .prose blockquote { margin: 2rem 0; padding: .8rem 1.3rem; color: var(--emerald-deep); background: var(--mint); border-inline-start: 4px solid var(--emerald); }
 .poem { font-size: 1.4rem; line-height: 2.35; }
 .poem h3 { margin: 4.5rem 0 1.25rem; color: var(--gold); font-size: clamp(1.75rem, 4vw, 2.15rem); font-weight: 700; }
-.memorial-poem > ol:first-of-type { padding: 0; text-align: center; list-style-position: inside; }
-.memorial-poem > ol:first-of-type li { margin-block: .35rem; }
-.memorial-poem > ol:first-of-type li p { display: inline; margin: 0; }
+.memorial-poem { max-width: 900px; }
+.elegy-verses { margin: 0; padding: 0; list-style: none; counter-reset: verse; font-size: clamp(1.1rem, 2vw, 1.3rem); }
+.elegy-verses > li { display: grid; grid-template-columns: 2.75rem minmax(0, 1fr); align-items: center; gap: 1rem; margin-block: .8rem; counter-increment: verse; }
+.elegy-verses > li::before { content: counter(verse); padding-inline-end: .75rem; color: var(--gold); border-inline-end: 1px solid var(--line); font-size: .8rem; font-variant-numeric: tabular-nums; line-height: 1.4; text-align: center; }
+.bayt { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: baseline; gap: clamp(.75rem, 2vw, 1.35rem); }
+.hemistich { text-align: center; }
+.verse-divider { color: var(--gold); font-size: .55em; opacity: .8; }
 .memorial-poem > hr { margin: 3rem 0 2rem; border: 0; border-top: 1px solid var(--line); }
 .memorial-poem > hr ~ * { text-align: start; }
 .stanza-art { width: min(100%, 560px); overflow: hidden; margin: 0 0 2.75rem auto; line-height: 0; background: var(--mint); border: 1px solid var(--line); border-radius: 1rem; box-shadow: var(--shadow); }
@@ -300,6 +304,9 @@ footer { color: var(--muted); background: var(--mint); border-top: 1px solid var
 @media (max-width: 700px) {
   .article-meta, .footer-inner { flex-direction: column; gap: .2rem; }
   .article-prose > .entry-cover { width: min(100%, 520px); float: none; margin: 0 auto 2rem; shape-outside: none; }
+  .elegy-verses > li { grid-template-columns: 2rem minmax(0, 1fr); gap: .65rem; }
+  .bayt { grid-template-columns: 1fr; gap: .1rem; }
+  .verse-divider { width: 2.25rem; height: 1px; margin: .2rem auto; overflow: hidden; background: var(--gold); opacity: .55; }
 }
 
 .english-section { font-family: 'EB Garamond', Georgia, 'Times New Roman', serif; }
