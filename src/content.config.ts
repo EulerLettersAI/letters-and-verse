@@ -17,7 +17,12 @@ const commonSchema = z.object({
 
 const articles = defineCollection({
   loader: glob({ base: './src/content/articles', pattern: '**/*.{md,mdx}' }),
-  schema: commonSchema,
+  schema: commonSchema.extend({
+    video: z.object({
+      src: z.string(),
+      caption: z.string().optional(),
+    }).optional(),
+  }),
 });
 
 const poetry = defineCollection({

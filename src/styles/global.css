@@ -292,6 +292,9 @@ h1, h2, h3 { color: var(--emerald-deep); line-height: 1.35; }
 .entry-cover { width: min(100%, 560px); overflow: hidden; margin: 0 auto 2.5rem; background: var(--mint); border: 1px solid var(--line); border-radius: 1.25rem; box-shadow: var(--shadow); }
 .article-prose > .entry-cover { width: min(42%, 320px); float: inline-start; margin: .35rem 0 1.5rem; margin-inline-end: 2rem; shape-outside: inset(0 round 1.25rem); shape-margin: .25rem; }
 .entry-cover img { width: 100%; height: auto; display: block; aspect-ratio: 3 / 2; object-fit: cover; }
+.entry-video { width: min(100%, 384px); margin: 0 auto 2.75rem; }
+.entry-video video { width: 100%; height: auto; display: block; aspect-ratio: 8 / 15; background: #050807; border: 1px solid var(--line); border-radius: 1.25rem; box-shadow: var(--shadow); object-fit: contain; }
+.entry-video figcaption { margin-top: .65rem; color: var(--muted); font-size: .9rem; text-align: center; }
 .prose { max-width: 780px; margin-inline: auto; font-size: 1.25rem; }
 .article-prose::after { content: ''; display: block; clear: both; }
 .prose h2 { margin-top: 2.5rem; }
