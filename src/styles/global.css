@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Source+Sans+3:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 
 :root {
   --ink: #f2fbf7;
@@ -25,10 +25,11 @@ body {
     repeating-linear-gradient(90deg, rgba(242, 251, 247, 0.025) 0 1px, transparent 1px 110px),
     repeating-linear-gradient(0deg, rgba(242, 251, 247, 0.018) 0 1px, transparent 1px 110px),
     var(--paper);
-  font-family: 'Noto Naskh Arabic', serif;
+  font-family: 'Amiri', 'Times New Roman', serif;
   font-size: 1.15rem;
   line-height: 1.9;
 }
+html[lang="en"] body { font-family: 'EB Garamond', Georgia, 'Times New Roman', serif; }
 a { color: inherit; }
 /* LIGHT HEADER */
 .site-header,
@@ -194,9 +195,13 @@ header .nav-cta {
 .eyebrow, .kicker, .entry-kind {
   margin: 0;
   color: var(--gold);
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: .78rem;
+  font-size: .82rem;
   font-weight: 700;
+}
+.eyebrow,
+:lang(en) > .kicker,
+:lang(en) > .entry-kind {
+  font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
   letter-spacing: .15em;
   text-transform: uppercase;
 }
@@ -294,7 +299,7 @@ footer { color: var(--muted); background: var(--mint); border-top: 1px solid var
 
 .language-group + .language-group { margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--line); }
 .language-heading { margin: 0 0 1rem; font-size: 1.3rem; }
-.language-group[lang="en"] { font-family: 'Source Sans 3', sans-serif; }
+.language-group[lang="en"] { font-family: 'EB Garamond', Georgia, 'Times New Roman', serif; }
 
 .page-title span { display: block; }
-.page-title [lang="en"] { margin-top: .35rem; font-family: 'Source Sans 3', sans-serif; font-size: .8em; color: var(--emerald); }
+.page-title [lang="en"] { margin-top: .35rem; font-family: 'EB Garamond', Georgia, 'Times New Roman', serif; font-size: .8em; color: var(--emerald); }
