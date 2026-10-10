@@ -28,7 +28,6 @@ const showDescription = entry.data.description.trim() !== entry.data.title.trim(
   <article class="prose-shell poem-page">
     <a class="back-link" href={import.meta.env.BASE_URL}>← جميع النصوص</a>
     <header class="article-header">
-      <p class="kicker">{entry.data.form ?? 'قصيدة'}</p>
       <h1>{entry.data.title}</h1>
       {showDescription && <p>{entry.data.description}</p>}
       <div class="article-meta"><AuthorLink author={entry.data.author} /><time datetime={entry.data.publishedAt.toISOString()}>{date}</time></div>
