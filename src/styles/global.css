@@ -186,12 +186,18 @@ header .nav-cta {
   margin-inline: auto;
 }
 .hero {
-  padding: clamp(2rem, 5vw, 3.5rem) 22px;
-  background:
-    linear-gradient(145deg, rgba(8, 20, 15, .8), rgba(6, 15, 12, .65));
-  border-bottom: 1px solid var(--line);
+  padding: clamp(2.75rem, 5vw, 4rem) 22px;
 }
-.shell { width: min(100%, 900px); margin: auto; text-align: center; }
+.shell {
+  width: min(100%, 1140px);
+  margin: auto;
+  padding: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 6vw, 4.5rem);
+  text-align: center;
+  background: linear-gradient(145deg, rgba(4, 15, 11, .98), rgba(2, 11, 8, .94));
+  border: 1px solid rgba(242, 251, 247, .1);
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, .28);
+}
 .eyebrow, .kicker {
   margin: 0;
   color: var(--gold);
@@ -322,6 +328,8 @@ footer { color: var(--muted); background: var(--mint); border-top: 1px solid var
 .footer-inner { display: flex; justify-content: space-between; padding-block: 1.5rem; font-size: .9rem; }
 .footer-inner a { color: var(--emerald); }
 @media (max-width: 700px) {
+  .hero { padding: 1.5rem 16px; }
+  .shell { padding: 2rem 1.25rem; border-radius: 1.1rem; }
   .article-meta, .footer-inner { flex-direction: column; gap: .2rem; }
   .article-prose > .entry-cover { width: min(100%, 520px); float: none; margin: 0 auto 2rem; shape-outside: none; }
   .classical-poem .elegy-verses > li { margin-block: 0; padding-block: 1.15rem; }
