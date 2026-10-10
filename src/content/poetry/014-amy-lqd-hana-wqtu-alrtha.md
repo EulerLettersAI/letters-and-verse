@@ -5,7 +5,8 @@ publishedAt: 2021-01-16
 author: "Samer Kababji"
 language: ar
 draft: false
-form: "البسيط"
+poetryType: "classical"
+meter: "البسيط"
 cover:
   src: "images/covers/014-amy-lqd-hana-wqtu-alrtha.webp"
   alt: "لوحة تذكارية مقرّبة لسيدة مسنّة بوشاح خمري تمسك وردة وردية وتحيط بها عتمة متدرجة"

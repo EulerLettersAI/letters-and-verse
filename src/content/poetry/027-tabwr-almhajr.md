@@ -5,6 +5,7 @@ publishedAt: 2014-03-29
 author: "Samer Kababji"
 language: ar
 draft: false
+poetryType: "free"
 cover:
   src: "images/covers/027-tabwr-almhajr.webp"
   alt: "مهاجر يحمل حقيبة ويقف في طابور طويل داخل قاعة باردة بينما يظهر الوطن عند الغروب"

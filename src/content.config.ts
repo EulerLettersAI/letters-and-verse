@@ -23,8 +23,17 @@ const articles = defineCollection({
 const poetry = defineCollection({
   loader: glob({ base: './src/content/poetry', pattern: '**/*.{md,mdx}' }),
   schema: commonSchema.extend({
-    form: z.string().optional(),
+    poetryType: z.enum(['free', 'classical']),
+    meter: z.string().trim().min(1).optional(),
     showCoverOnPage: z.boolean().default(true),
+  }).superRefine((poem, context) => {
+    if (poem.poetryType === 'classical' && !poem.meter) {
+      context.addIssue({
+        code: 'custom',
+        path: ['meter'],
+        message: 'Classical poetry requires a meter.',
+      });
+    }
   }),
 });
 

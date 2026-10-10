@@ -16,7 +16,14 @@ const date = new Intl.DateTimeFormat(locale, { dateStyle: 'long' }).format(entry
 const coverSrc = entry.data.cover ? `${import.meta.env.BASE_URL}${entry.data.cover.src}` : undefined;
 const coverSrcSmall = coverSrc?.replace(/\.webp$/, '-768.webp');
 const showDescription = entry.data.description.trim() !== entry.data.title.trim();
-const poemClass = entry.id === '014-amy-lqd-hana-wqtu-alrtha' ? 'prose poem memorial-poem' : 'prose poem';
+const poetryTypeLabel = entry.data.poetryType === 'classical'
+  ? `شعر عمودي${entry.data.meter ? ` من بحر ${entry.data.meter}` : ''}`
+  : 'شعر حر';
+const poemClass = [
+  'prose',
+  'poem',
+  entry.data.poetryType === 'classical' ? 'classical-poem' : 'free-poem',
+].filter(Boolean).join(' ');
 ---
 
 <SiteLayout
@@ -30,6 +37,7 @@ const poemClass = entry.id === '014-amy-lqd-hana-wqtu-alrtha' ? 'prose poem memo
     <a class="back-link" href={import.meta.env.BASE_URL}>← جميع النصوص</a>
     <header class="article-header">
       <h1>{entry.data.title}</h1>
+      <p class="poetry-type">{poetryTypeLabel}</p>
       {showDescription && <p>{entry.data.description}</p>}
       <div class="article-meta"><AuthorLink author={entry.data.author} /><time datetime={entry.data.publishedAt.toISOString()}>{date}</time></div>
     </header>
@@ -53,7 +61,7 @@ const poemClass = entry.id === '014-amy-lqd-hana-wqtu-alrtha' ? 'prose poem memo
 </SiteLayout>
 
 <script>
-  const verseNotes = Array.from(document.querySelectorAll<HTMLDetailsElement>('details.verse-with-note'));
+  const verseNotes = Array.from(document.querySelectorAll<HTMLDetailsElement>('.classical-poem details.verse-with-note'));
 
   verseNotes.forEach((note) => {
     note.addEventListener('toggle', () => {
