@@ -322,7 +322,7 @@ h1, h2, h3 { color: var(--emerald-deep); line-height: 1.35; }
 .classical-poem .bayt { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: baseline; gap: clamp(.75rem, 2vw, 1.35rem); }
 .classical-poem .hemistich { text-align: center; }
 .classical-poem .verse-divider { color: var(--gold); font-size: .55em; opacity: .8; }
-.stanza-art { width: min(100%, 560px); overflow: hidden; margin: 0 0 2.75rem auto; line-height: 0; background: var(--mint); border: 1px solid var(--line); border-radius: 1rem; box-shadow: var(--shadow); }
+.stanza-art { width: min(82%, 440px); overflow: hidden; margin: 0 0 2.75rem auto; line-height: 0; background: var(--mint); border: 1px solid var(--line); border-radius: 1rem; box-shadow: var(--shadow); }
 .stanza-art img { width: 100%; height: auto; display: block; aspect-ratio: 3 / 2; object-fit: cover; }
 footer { color: var(--muted); background: var(--mint); border-top: 1px solid var(--line); }
 .footer-inner { display: flex; justify-content: space-between; padding-block: 1.5rem; font-size: .9rem; }
