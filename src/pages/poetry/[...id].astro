@@ -51,3 +51,23 @@ const poemClass = entry.id === '014-amy-lqd-hana-wqtu-alrtha' ? 'prose poem memo
     <div class={poemClass}><Content /></div>
   </article>
 </SiteLayout>
+
+<script>
+  const verseNotes = Array.from(document.querySelectorAll<HTMLDetailsElement>('details.verse-with-note'));
+
+  verseNotes.forEach((note) => {
+    note.addEventListener('toggle', () => {
+      if (!note.open) return;
+
+      verseNotes.forEach((otherNote) => {
+        if (otherNote !== note) otherNote.removeAttribute('open');
+      });
+    });
+
+    note.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape' || !note.open) return;
+      note.removeAttribute('open');
+      note.querySelector<HTMLElement>('summary')?.focus();
+    });
+  });
+</script>
