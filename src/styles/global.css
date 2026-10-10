@@ -270,25 +270,26 @@ h1, h2, h3 { color: var(--emerald-deep); line-height: 1.35; }
 .prose-shell::after { content: ''; display: block; clear: both; }
 .back-link { width: min(100%, 780px); display: block; margin-inline: auto; color: var(--emerald); font-weight: 700; text-decoration: none; }
 .article-header { max-width: 780px; margin: 2rem auto 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--line); }
-.article-header h1 { margin: .3rem 0 .6rem; font-size: clamp(2.4rem, 8vw, 4.5rem); }
+.article-header h1 { margin: .3rem 0 .6rem; font-size: clamp(2rem, 5vw, 3.25rem); }
 .article-header > p:not(.kicker) { color: var(--muted); }
 .article-meta { display: flex; gap: 1.5rem; color: var(--muted); font-size: .95rem; }
 .entry-cover { width: min(100%, 560px); overflow: hidden; margin: 0 auto 2.5rem; background: var(--mint); border: 1px solid var(--line); border-radius: 1.25rem; box-shadow: var(--shadow); }
-.prose-shell:not(.poem-page) > .entry-cover { width: min(42%, 360px); float: inline-start; margin: .35rem 0 1.5rem; margin-inline-end: 2rem; shape-outside: inset(0 round 1.25rem); shape-margin: .25rem; }
+.article-prose > .entry-cover { width: min(42%, 320px); float: inline-start; margin: .35rem 0 1.5rem; margin-inline-end: 2rem; shape-outside: inset(0 round 1.25rem); shape-margin: .25rem; }
 .entry-cover img { width: 100%; height: auto; display: block; aspect-ratio: 3 / 2; object-fit: cover; }
 .prose { max-width: 780px; margin-inline: auto; font-size: 1.25rem; }
+.article-prose::after { content: ''; display: block; clear: both; }
 .prose h2 { margin-top: 2.5rem; }
 .prose blockquote { margin: 2rem 0; padding: .8rem 1.3rem; color: var(--emerald-deep); background: var(--mint); border-inline-start: 4px solid var(--emerald); }
 .poem { font-size: 1.4rem; line-height: 2.35; }
 .poem h3 { margin: 4.5rem 0 1.25rem; color: var(--gold); font-size: 1.35rem; }
-.stanza-art { overflow: hidden; margin: 0 0 2.75rem; line-height: 0; background: var(--mint); border: 1px solid var(--line); border-radius: 1rem; box-shadow: var(--shadow); }
+.stanza-art { width: min(100%, 560px); overflow: hidden; margin: 0 auto 2.75rem; line-height: 0; background: var(--mint); border: 1px solid var(--line); border-radius: 1rem; box-shadow: var(--shadow); }
 .stanza-art img { width: 100%; height: auto; display: block; aspect-ratio: 3 / 2; object-fit: cover; }
 footer { color: var(--muted); background: var(--mint); border-top: 1px solid var(--line); }
 .footer-inner { display: flex; justify-content: space-between; padding-block: 1.5rem; font-size: .9rem; }
 .footer-inner a { color: var(--emerald); }
 @media (max-width: 700px) {
   .article-meta, .footer-inner { flex-direction: column; gap: .2rem; }
-  .prose-shell:not(.poem-page) > .entry-cover { width: min(100%, 520px); float: none; margin: 0 auto 2rem; shape-outside: none; }
+  .article-prose > .entry-cover { width: min(100%, 520px); float: none; margin: 0 auto 2rem; shape-outside: none; }
 }
 
 .language-group + .language-group { margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--line); }
