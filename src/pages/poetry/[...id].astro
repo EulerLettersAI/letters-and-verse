@@ -31,7 +31,7 @@ const coverSrcSmall = coverSrc?.replace(/\.webp$/, '-768.webp');
       <p>{entry.data.description}</p>
       <div class="article-meta"><AuthorLink author={entry.data.author} /><time datetime={entry.data.publishedAt.toISOString()}>{date}</time></div>
     </header>
-    {coverSrc && entry.data.cover && (
+    {entry.data.showCoverOnPage && coverSrc && entry.data.cover && (
       <figure class="entry-cover">
         <img
           src={coverSrc}

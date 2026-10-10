@@ -24,6 +24,7 @@ const poetry = defineCollection({
   loader: glob({ base: './src/content/poetry', pattern: '**/*.{md,mdx}' }),
   schema: commonSchema.extend({
     form: z.string().optional(),
+    showCoverOnPage: z.boolean().default(true),
   }),
 });
 

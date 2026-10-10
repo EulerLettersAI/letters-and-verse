@@ -8,6 +8,7 @@ draft: false
 cover:
   src: "images/covers/015-khmswn-amaa-byn-aswar-alklam.webp"
   alt: "درويش وحيد وسط متاهة من الأوراق والمرايا والأقنعة يتجه نحو باب مضيء"
+showCoverOnPage: false
 ---
 ### (شهود)
 
