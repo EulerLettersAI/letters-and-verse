@@ -1,6 +1,6 @@
 ---
-title: "Take me back to counting palm trees"
-description: "Take me back to counting palm trees"
+title: "Take Me Back to Counting Palm Trees"
+description: "Take Me Back to Counting Palm Trees"
 publishedAt: 2021-11-29
 author: "Sarah Kababji"
 language: en

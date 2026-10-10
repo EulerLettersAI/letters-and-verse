@@ -1,6 +1,6 @@
 ---
-title: "Sand Beneath your Feet"
-description: "Sand Beneath your Feet"
+title: "Sand Beneath Your Feet"
+description: "Sand Beneath Your Feet"
 publishedAt: 2021-02-07
 author: "Sarah Kababji"
 language: en

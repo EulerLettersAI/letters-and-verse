@@ -1,6 +1,6 @@
 ---
-title: "A crying sofa"
-description: "A crying sofa"
+title: "A Crying Sofa"
+description: "A Crying Sofa"
 publishedAt: 2021-11-29
 author: "Sarah Kababji"
 language: en
