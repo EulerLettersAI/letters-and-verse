@@ -63,7 +63,6 @@ const isParked = articles.length === 0 && poems.length === 0;
                   author={article.data.author}
                   href={`${base}articles/${article.id}/`}
                   language={language}
-                  kind={language === 'ar' ? 'رسالة' : 'Article'}
                   cover={article.data.cover ? `${base}${article.data.cover.src}` : undefined}
                   coverAlt={article.data.cover?.alt}
                 />

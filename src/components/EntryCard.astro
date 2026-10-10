@@ -7,7 +7,7 @@ interface Props {
   date: Date;
   author: string;
   href: string;
-  kind: string;
+  kind?: string;
   language: 'ar' | 'en';
   cover?: string;
   coverAlt?: string;
@@ -39,7 +39,7 @@ const formattedDate = new Intl.DateTimeFormat(language === 'ar' ? 'ar-JO' : 'en-
     </div>
   )}
   <div class="entry-card-body">
-    <p class="entry-kind">{kind}</p>
+    {kind && <p class="entry-kind">{kind}</p>}
     <h4><a href={href}>{title}</a></h4>
     {showDescription && <p>{description}</p>}
     <p class="entry-meta">
