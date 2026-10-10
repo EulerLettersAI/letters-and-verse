@@ -19,8 +19,6 @@ cover:
 بعد summary داخل verse-explanation.
 -->
 
-[استمع إلى السينية السنية](https://youtu.be/SrH91N9g3ek)
-
 <ol class="elegy-verses">
   <li>
     <details class="verse-with-note">
