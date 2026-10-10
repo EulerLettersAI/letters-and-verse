@@ -36,7 +36,14 @@ const poemClass = [
   <article class="prose-shell poem-page">
     <a class="back-link" href={import.meta.env.BASE_URL}>← جميع النصوص</a>
     <header class="article-header">
-      <h1>{entry.data.title}</h1>
+      {entry.data.titleNote ? (
+        <details class="title-with-note">
+          <summary><h1>{entry.data.title}</h1></summary>
+          <p class="title-explanation">{entry.data.titleNote}</p>
+        </details>
+      ) : (
+        <h1>{entry.data.title}</h1>
+      )}
       <p class="poetry-type">{poetryTypeLabel}</p>
       {showDescription && <p>{entry.data.description}</p>}
       <div class="article-meta"><AuthorLink author={entry.data.author} /><time datetime={entry.data.publishedAt.toISOString()}>{date}</time></div>
@@ -62,12 +69,14 @@ const poemClass = [
 
 <script>
   const verseNotes = Array.from(document.querySelectorAll<HTMLDetailsElement>('.classical-poem details.verse-with-note'));
+  const titleNotes = Array.from(document.querySelectorAll<HTMLDetailsElement>('.article-header details.title-with-note'));
+  const interactiveNotes = [...verseNotes, ...titleNotes];
 
-  verseNotes.forEach((note) => {
+  interactiveNotes.forEach((note) => {
     note.addEventListener('toggle', () => {
       if (!note.open) return;
 
-      verseNotes.forEach((otherNote) => {
+      interactiveNotes.forEach((otherNote) => {
         if (otherNote !== note) otherNote.removeAttribute('open');
       });
     });

@@ -276,6 +276,16 @@ h1, h2, h3 { color: var(--emerald-deep); line-height: 1.35; }
 .back-link { width: min(100%, 780px); display: block; margin-inline: auto; color: var(--emerald); font-weight: 700; text-decoration: none; }
 .article-header { max-width: 780px; margin: 2rem auto 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--line); }
 .article-header h1 { margin: .3rem 0 .6rem; font-size: clamp(2rem, 5vw, 3.25rem); }
+.title-with-note { position: relative; }
+.title-with-note > summary { list-style: none; cursor: help; border-radius: .55rem; }
+.title-with-note > summary::-webkit-details-marker { display: none; }
+.title-with-note > summary::marker { content: ''; }
+.title-with-note > summary h1 { text-decoration-line: underline; text-decoration-style: dotted; text-decoration-color: color-mix(in srgb, var(--gold) 55%, transparent); text-decoration-thickness: 1px; text-underline-offset: .22em; }
+.title-with-note > summary:hover h1, .title-with-note > summary:focus-visible h1 { color: var(--emerald-deep); }
+.title-with-note > summary:focus-visible { outline: 1px solid rgba(40, 201, 135, .28); outline-offset: 4px; }
+.article-header .title-explanation { width: min(42rem, calc(100vw - 3rem)); display: block; position: absolute; z-index: 30; top: calc(100% + .55rem); left: 50%; box-sizing: border-box; margin: 0; padding: .9rem 1.1rem; color: var(--ink); font-size: .98rem; font-weight: 400; line-height: 1.9; text-align: start; background: color-mix(in srgb, var(--card) 96%, black); border: 1px solid color-mix(in srgb, var(--gold) 55%, var(--line)); border-radius: .75rem; box-shadow: 0 18px 42px rgba(0, 0, 0, .38); opacity: 0; visibility: hidden; pointer-events: none; transform: translate(-50%, -.3rem); transition: opacity .16s ease, visibility .16s ease, transform .16s ease; }
+.article-header .title-explanation::before { content: ''; width: .65rem; height: .65rem; position: absolute; bottom: 100%; left: 50%; background: color-mix(in srgb, var(--card) 96%, black); border-top: 1px solid color-mix(in srgb, var(--gold) 55%, var(--line)); border-left: 1px solid color-mix(in srgb, var(--gold) 55%, var(--line)); transform: translate(-50%, 50%) rotate(45deg); }
+.title-with-note:hover > .title-explanation, .title-with-note:focus-within > .title-explanation, .title-with-note[open] > .title-explanation { opacity: 1; visibility: visible; pointer-events: auto; transform: translate(-50%, 0); }
 .article-header > p:not(.kicker) { color: var(--muted); }
 .article-header .poetry-type { margin: -.1rem 0 .8rem; color: var(--gold); font-size: clamp(.95rem, 2vw, 1.1rem); font-weight: 700; }
 .article-meta { display: flex; gap: 1.5rem; color: var(--muted); font-size: .95rem; }
@@ -316,6 +326,7 @@ footer { color: var(--muted); background: var(--mint); border-top: 1px solid var
   .classical-poem .bayt { grid-template-columns: 1fr; gap: .1rem; }
   .classical-poem .verse-divider { width: 1.5rem; height: 0; margin: .35rem auto; overflow: hidden; color: transparent; background: none; border-top: 2px dotted var(--gold); opacity: .65; }
   .classical-poem .verse-explanation { width: min(34rem, calc(100vw - 2.25rem)); font-size: .9rem; }
+  .article-header .title-explanation { width: min(34rem, calc(100vw - 2.25rem)); font-size: .9rem; }
 }
 
 .english-section { font-family: 'EB Garamond', Georgia, 'Times New Roman', serif; }

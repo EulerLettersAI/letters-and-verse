@@ -25,6 +25,7 @@ const poetry = defineCollection({
   schema: commonSchema.extend({
     poetryType: z.enum(['free', 'classical']),
     meter: z.string().trim().min(1).optional(),
+    titleNote: z.string().trim().min(1).optional(),
     showCoverOnPage: z.boolean().default(true),
   }).superRefine((poem, context) => {
     if (poem.poetryType === 'classical' && !poem.meter) {
