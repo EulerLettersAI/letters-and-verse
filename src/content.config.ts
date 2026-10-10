@@ -20,6 +20,7 @@ const articles = defineCollection({
   schema: commonSchema.extend({
     video: z.object({
       src: z.string(),
+      poster: z.string().optional(),
       caption: z.string().optional(),
     }).optional(),
   }),

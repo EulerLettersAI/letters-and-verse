@@ -6,10 +6,11 @@ author: "Sarah Kababji"
 language: en
 draft: false
 cover:
-  src: "images/covers/063-grounding-poster.webp"
-  alt: "A small child walking outdoors in a still from the Grounding video reading"
+  src: "images/covers/063-grounding-card.webp"
+  alt: "A small child walking outdoors in a landscape still from the Grounding video reading"
 video:
   src: "videos/063-grounding.mp4"
+  poster: "images/covers/063-grounding-poster.webp"
   caption: "Sarah Kababji reads Grounding"
 ---
 
