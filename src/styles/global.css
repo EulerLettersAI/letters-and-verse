@@ -300,4 +300,4 @@ footer { color: var(--muted); background: var(--mint); border-top: 1px solid var
 .english-section { font-family: 'EB Garamond', Georgia, 'Times New Roman', serif; }
 
 .page-title span { display: block; }
-.page-title [lang="en"] { margin-top: .35rem; font-family: 'EB Garamond', Georgia, 'Times New Roman', serif; font-size: .8em; color: var(--emerald); }
+.page-title [lang="en"] { margin-bottom: .35rem; font-family: 'EB Garamond', Georgia, 'Times New Roman', serif; font-size: .8em; color: var(--emerald); }

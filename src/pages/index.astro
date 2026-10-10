@@ -24,9 +24,8 @@ const isParked = articles.length === 0 && poems.length === 0;
       <div class="parking-glow parking-glow-one" aria-hidden="true"></div>
       <div class="parking-glow parking-glow-two" aria-hidden="true"></div>
       <div class="parking-card">
-        <p class="eyebrow">Euler Letters AI</p>
         <div class="parking-mark" aria-hidden="true">و</div>
-        <h1 id="parking-title" class="page-title"><span lang="ar" dir="rtl">رسائل وقصائد</span><span lang="en" dir="ltr">Letters &amp; Verse</span></h1>
+        <h1 id="parking-title" class="page-title"><span lang="en" dir="ltr">Letters &amp; Verse</span><span lang="ar" dir="rtl">رسائل وقصائد</span></h1>
         <span class="parking-rule" aria-hidden="true"></span>
         <p class="parking-copy">نُعِدّ مكانًا للتأمل والمعرفة والشعر.<br />سنفتح أبوابه قريبًا.</p>
         <p class="parking-status"><span aria-hidden="true"></span> قيد الإعداد</p>
@@ -36,10 +35,34 @@ const isParked = articles.length === 0 && poems.length === 0;
     <>
   <section class="hero">
     <div class="shell">
-      <p class="eyebrow">Euler Letters AI</p>
-      <h1 class="page-title"><span lang="ar" dir="rtl">رسائل وقصائد</span><span lang="en" dir="ltr">Letters &amp; Verse</span></h1>
+      <h1 class="page-title"><span lang="en" dir="ltr">Letters &amp; Verse</span><span lang="ar" dir="rtl">رسائل وقصائد</span></h1>
       <p class="hero-copy">رسائل تتأمل في المعرفة والحياة، وقصائد تنصت إلى ما بينهما.</p>
     </div>
+  </section>
+
+  <section class="content-section english-section" id="english-letters" lang="en" dir="ltr" aria-labelledby="english-letters-heading">
+    <div class="section-heading">
+      <h2 id="english-letters-heading">Letters</h2>
+      <span>{englishArticles.length} {englishArticles.length === 1 ? 'Letter' : 'Letters'}</span>
+    </div>
+    {englishArticles.length > 0 ? (
+      <div class="entry-grid">
+        {englishArticles.map((article) => (
+          <EntryCard
+            title={article.data.title}
+            description={article.data.description}
+            date={article.data.publishedAt}
+            author={article.data.author}
+            href={`${base}articles/${article.id}/`}
+            language="en"
+            cover={article.data.cover ? `${base}${article.data.cover.src}` : undefined}
+            coverAlt={article.data.cover?.alt}
+          />
+        ))}
+      </div>
+    ) : (
+      <p class="empty-state">The first English letter will be published soon.</p>
+    )}
   </section>
 
   <section class="content-section arabic-section" lang="ar" dir="rtl" aria-label="النصوص العربية">
@@ -92,31 +115,6 @@ const isParked = articles.length === 0 && poems.length === 0;
         <p class="empty-state">ستُنشر القصيدة الأولى قريبًا.</p>
       )}
     </section>
-  </section>
-
-  <section class="content-section english-section" id="english-letters" lang="en" dir="ltr" aria-labelledby="english-letters-heading">
-    <div class="section-heading">
-      <h2 id="english-letters-heading">Letters</h2>
-      <span>{englishArticles.length} {englishArticles.length === 1 ? 'Letter' : 'Letters'}</span>
-    </div>
-    {englishArticles.length > 0 ? (
-      <div class="entry-grid">
-        {englishArticles.map((article) => (
-          <EntryCard
-            title={article.data.title}
-            description={article.data.description}
-            date={article.data.publishedAt}
-            author={article.data.author}
-            href={`${base}articles/${article.id}/`}
-            language="en"
-            cover={article.data.cover ? `${base}${article.data.cover.src}` : undefined}
-            coverAlt={article.data.cover?.alt}
-          />
-        ))}
-      </div>
-    ) : (
-      <p class="empty-state">The first English letter will be published soon.</p>
-    )}
   </section>
     </>
   )}
