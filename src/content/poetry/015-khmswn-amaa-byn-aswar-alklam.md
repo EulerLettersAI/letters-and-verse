@@ -11,6 +11,10 @@ cover:
 ---
 ### (شهود)
 
+<figure class="stanza-art">
+  <img src="/letters-and-verse/images/stanzas/015-khmswn-amaa-byn-aswar-alklam/01-shuhud.webp" alt="يدان تحملان الرمل وتتحول حبات قليلة إلى ذهب أمام ممر من أوراق مظلمة" width="1200" height="800" loading="lazy" decoding="async">
+</figure>
+
 خمسون عاماً بين أسوار الكلامْ
 
 ما حان بعدُ الصومُ عن ذاك الفضول!
@@ -51,6 +55,10 @@ cover:
 
 ### (دينوسياسة)
 
+<figure class="stanza-art">
+  <img src="/letters-and-verse/images/stanzas/015-khmswn-amaa-byn-aswar-alklam/02-din-wa-siyasa.webp" alt="كتاب فارغ وقطرة دمع وأقنعة ذهبية على ميزان وسط سوق متهدم" width="1200" height="800" loading="lazy" decoding="async">
+</figure>
+
 خمسون عاماً بين أسوارِ الكلامْ
 
 لن أكتب الشعر المُقفى ثانيهْ
@@ -86,6 +94,10 @@ cover:
 عصرِِ المباني و القصورْ
 
 ### (تجديد)
+
+<figure class="stanza-art">
+  <img src="/letters-and-verse/images/stanzas/015-khmswn-amaa-byn-aswar-alklam/03-tajdid.webp" alt="درويش يصعد منصة تتحول إلى بوابة مضيئة بينما تنفتح أوعية ترمز إلى العقول" width="1200" height="800" loading="lazy" decoding="async">
+</figure>
 
 خمسون عاماً بين أسوار الكلامْ
 
@@ -123,6 +135,10 @@ cover:
 
 ### (خيانة)
 
+<figure class="stanza-art">
+  <img src="/letters-and-verse/images/stanzas/015-khmswn-amaa-byn-aswar-alklam/04-khiyana.webp" alt="مريد يواجه مرآة مشوهة وسط جماعتين متخاصمتين ودرويش يحمي نوراً في قلبه" width="1200" height="800" loading="lazy" decoding="async">
+</figure>
+
 خمسون عاماً بين أسوار الكلام
 
 وبناتُ أفكارِ المريدِ كما يُريدْ
@@ -157,6 +173,10 @@ cover:
 
 ### (ضلال)
 
+<figure class="stanza-art">
+  <img src="/letters-and-verse/images/stanzas/015-khmswn-amaa-byn-aswar-alklam/05-dalal.webp" alt="قرد يعظ فوق منبر بينما تكشف المرايا ما خلفه ويحمل الأتباع المرايا إلى النار" width="1200" height="800" loading="lazy" decoding="async">
+</figure>
+
 خمسون عاما بين أسوار الكلام
 
 والقردُ يخطبُ كلّ يومٍ في العفافْ
@@ -188,6 +208,10 @@ cover:
  ثم استديروا باسمينْ
 
 ### (جدال)
+
+<figure class="stanza-art">
+  <img src="/letters-and-verse/images/stanzas/015-khmswn-amaa-byn-aswar-alklam/06-jidal.webp" alt="متجادلون يحيطون بتمثال زجاجي أجوف بينما يضيء حجر ثابت في البعيد" width="1200" height="800" loading="lazy" decoding="async">
+</figure>
 
 خمسون عاماً بين أسوار الكلامْ
 
@@ -226,6 +250,10 @@ cover:
 بعدَ الفواتْ!
 
 ### (انتفاخ)
+
+<figure class="stanza-art">
+  <img src="/letters-and-verse/images/stanzas/015-khmswn-amaa-byn-aswar-alklam/07-intifakh.webp" alt="نساء يعملن في طحن الحبوب وجمع الزيتون والحطب ورعاية طفل وخلفهن بدلات فارغة" width="1200" height="800" loading="lazy" decoding="async">
+</figure>
 
 خمسون عاما بين أسوار الكلامْ
 
@@ -283,6 +311,10 @@ cover:
 
 ### (افتقار)
 
+<figure class="stanza-art">
+  <img src="/letters-and-verse/images/stanzas/015-khmswn-amaa-byn-aswar-alklam/08-iftiqar.webp" alt="رجل مسن على سرير بسيط ينظر إلى شمس لا تغيب بينما تتلاشى القيود وأدوات القياس" width="1200" height="800" loading="lazy" decoding="async">
+</figure>
+
 خمسون عاما بين اسوار الكلام
 
 ها قدْ حُملتَ على السريرْ
@@ -334,6 +366,10 @@ cover:
 فلْتصمتا
 
 ### (كبرياء)
+
+<figure class="stanza-art">
+  <img src="/letters-and-verse/images/stanzas/015-khmswn-amaa-byn-aswar-alklam/09-kibriya.webp" alt="إنسان يعبر مراحل العمر مطارداً الكأس والذهب والمكانة حتى بحر من الأيدي المصفقة" width="1200" height="800" loading="lazy" decoding="async">
+</figure>
 
 خمسون عاما بين اسوار الكلام
 
@@ -392,6 +428,10 @@ cover:
 بالكبرياءْ!
 
 ### (مدد)
+
+<figure class="stanza-art">
+  <img src="/letters-and-verse/images/stanzas/015-khmswn-amaa-byn-aswar-alklam/10-madad.webp" alt="شيخ مجهول يفتح باباً مضيئاً ويمد يده لأناس تتلاشى أحمالهم عند العتبة" width="1200" height="800" loading="lazy" decoding="async">
+</figure>
 
 خمسون عاما بين أسوار الكلامْ
 
