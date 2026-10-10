@@ -192,15 +192,14 @@ header .nav-cta {
   border-bottom: 1px solid var(--line);
 }
 .shell { width: min(100%, 900px); margin: auto; text-align: center; }
-.eyebrow, .kicker, .entry-kind {
+.eyebrow, .kicker {
   margin: 0;
   color: var(--gold);
   font-size: .82rem;
   font-weight: 700;
 }
 .eyebrow,
-:lang(en) > .kicker,
-:lang(en) > .entry-kind {
+:lang(en) > .kicker {
   font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
   letter-spacing: .15em;
   text-transform: uppercase;
@@ -255,6 +254,7 @@ h1, h2, h3 { color: var(--emerald-deep); line-height: 1.35; }
 .parking-glow-two { width: 30rem; height: 30rem; right: -14rem; bottom: -16rem; background: rgba(4, 120, 87, .1); }
 .content-section { padding-block: 4.5rem; scroll-margin-top: 7rem; }
 .content-section + .content-section { border-top: 1px solid var(--line); }
+.content-category + .content-category { margin-top: 4.5rem; padding-top: 4.5rem; border-top: 1px solid var(--line); }
 .section-heading { display: flex; align-items: end; justify-content: space-between; margin-bottom: 1.8rem; }
 .section-heading h2 { margin: 0; font-size: clamp(2rem, 5vw, 3rem); }
 .section-heading > span { color: var(--muted); font-size: .95rem; }
@@ -267,7 +267,7 @@ h1, h2, h3 { color: var(--emerald-deep); line-height: 1.35; }
 .entry-card h4 { margin: .25rem 0 .5rem; font-size: 1.55rem; }
 .entry-card h4 a { text-decoration: none; }
 .entry-card h4 a:hover { color: var(--emerald); }
-.entry-card p:not(.entry-kind) { margin: 0 0 1rem; color: var(--muted); }
+.entry-card p { margin: 0 0 1rem; color: var(--muted); }
 .entry-card .entry-meta { display: flex; align-items: baseline; gap: .45rem; margin: auto 0 0; color: var(--muted); font-size: .9rem; }
 .entry-card .entry-meta strong { color: var(--ink); font-weight: 700; }
 .empty-state { padding: 2.5rem; color: var(--muted); text-align: center; background: var(--mint); border: 1px dashed var(--line); border-radius: 1rem; }
@@ -297,9 +297,7 @@ footer { color: var(--muted); background: var(--mint); border-top: 1px solid var
   .article-prose > .entry-cover { width: min(100%, 520px); float: none; margin: 0 auto 2rem; shape-outside: none; }
 }
 
-.language-group + .language-group { margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--line); }
-.language-heading { margin: 0 0 1rem; font-size: 1.3rem; }
-.language-group[lang="en"] { font-family: 'EB Garamond', Georgia, 'Times New Roman', serif; }
+.english-section { font-family: 'EB Garamond', Georgia, 'Times New Roman', serif; }
 
 .page-title span { display: block; }
 .page-title [lang="en"] { margin-top: .35rem; font-family: 'EB Garamond', Georgia, 'Times New Roman', serif; font-size: .8em; color: var(--emerald); }

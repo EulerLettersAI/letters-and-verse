@@ -7,8 +7,10 @@ const byNewest = (a: { data: { publishedAt: Date } }, b: { data: { publishedAt: 
   b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf();
 const articles = (await getCollection('articles', ({ data }) => !data.draft)).sort(byNewest);
 const poems = (await getCollection('poetry', ({ data }) => !data.draft)).sort(byNewest);
+const arabicArticles = articles.filter((entry) => entry.data.language === 'ar');
+const englishArticles = articles.filter((entry) => entry.data.language === 'en');
+const arabicPoems = poems.filter((entry) => entry.data.language === 'ar');
 const base = import.meta.env.BASE_URL;
-const languages = ['ar', 'en'] as const;
 const isParked = articles.length === 0 && poems.length === 0;
 ---
 
@@ -40,76 +42,80 @@ const isParked = articles.length === 0 && poems.length === 0;
     </div>
   </section>
 
-  <section class="content-section" id="letters">
-    <div class="section-heading">
-      <div>
-        <p class="kicker">Letters</p>
-        <h2>الرسائل</h2>
+  <section class="content-section arabic-section" lang="ar" dir="rtl" aria-label="النصوص العربية">
+    <section class="content-category" id="letters" aria-labelledby="arabic-letters-heading">
+      <div class="section-heading">
+        <h2 id="arabic-letters-heading">الرسائل</h2>
+        <span>{arabicArticles.length} {arabicArticles.length === 1 ? 'رسالة' : 'رسائل'}</span>
       </div>
-      <span>{articles.length} {articles.length === 1 ? 'رسالة' : 'رسائل'}</span>
-    </div>
-    {articles.length > 0 ? (
-      <>{languages.map((language) => {
-        const entries = articles.filter((entry) => entry.data.language === language);
-        return entries.length > 0 && (
-          <section class="language-group" lang={language} dir={language === 'ar' ? 'rtl' : 'ltr'} aria-labelledby={`articles-${language}`}>
-            <h3 class="language-heading" id={`articles-${language}`}>{language === 'ar' ? 'العربية' : 'English'}</h3>
-            <div class="entry-grid">
-              {entries.map((article) => (
-                <EntryCard
-                  title={article.data.title}
-                  description={article.data.description}
-                  date={article.data.publishedAt}
-                  author={article.data.author}
-                  href={`${base}articles/${article.id}/`}
-                  language={language}
-                  cover={article.data.cover ? `${base}${article.data.cover.src}` : undefined}
-                  coverAlt={article.data.cover?.alt}
-                />
-              ))}
-            </div>
-          </section>
-        );
-      })}</>
-    ) : (
-      <p class="empty-state">ستُنشر الرسالة الأولى قريبًا.</p>
-    )}
+      {arabicArticles.length > 0 ? (
+        <div class="entry-grid">
+          {arabicArticles.map((article) => (
+            <EntryCard
+              title={article.data.title}
+              description={article.data.description}
+              date={article.data.publishedAt}
+              author={article.data.author}
+              href={`${base}articles/${article.id}/`}
+              language="ar"
+              cover={article.data.cover ? `${base}${article.data.cover.src}` : undefined}
+              coverAlt={article.data.cover?.alt}
+            />
+          ))}
+        </div>
+      ) : (
+        <p class="empty-state">ستُنشر الرسالة الأولى قريبًا.</p>
+      )}
+    </section>
+
+    <section class="content-category" id="verse" aria-labelledby="arabic-poetry-heading">
+      <div class="section-heading">
+        <h2 id="arabic-poetry-heading">القصائد</h2>
+        <span>{arabicPoems.length} {arabicPoems.length === 1 ? 'قصيدة' : 'قصائد'}</span>
+      </div>
+      {arabicPoems.length > 0 ? (
+        <div class="entry-grid">
+          {arabicPoems.map((poem) => (
+            <EntryCard
+              title={poem.data.title}
+              description={poem.data.description}
+              date={poem.data.publishedAt}
+              author={poem.data.author}
+              href={`${base}poetry/${poem.id}/`}
+              language="ar"
+              cover={poem.data.cover ? `${base}${poem.data.cover.src}` : undefined}
+              coverAlt={poem.data.cover?.alt}
+            />
+          ))}
+        </div>
+      ) : (
+        <p class="empty-state">ستُنشر القصيدة الأولى قريبًا.</p>
+      )}
+    </section>
   </section>
 
-  <section class="content-section" id="verse">
+  <section class="content-section english-section" id="english-letters" lang="en" dir="ltr" aria-labelledby="english-letters-heading">
     <div class="section-heading">
-      <div>
-        <p class="kicker">Verse</p>
-        <h2>القصائد</h2>
-      </div>
-      <span>{poems.length} {poems.length === 1 ? 'قصيدة' : 'قصائد'}</span>
+      <h2 id="english-letters-heading">Letters</h2>
+      <span>{englishArticles.length} {englishArticles.length === 1 ? 'Letter' : 'Letters'}</span>
     </div>
-    {poems.length > 0 ? (
-      <>{languages.map((language) => {
-        const entries = poems.filter((entry) => entry.data.language === language);
-        return entries.length > 0 && (
-          <section class="language-group" lang={language} dir={language === 'ar' ? 'rtl' : 'ltr'} aria-labelledby={`poetry-${language}`}>
-            <h3 class="language-heading" id={`poetry-${language}`}>{language === 'ar' ? 'العربية' : 'English'}</h3>
-            <div class="entry-grid">
-              {entries.map((poem) => (
-                <EntryCard
-                  title={poem.data.title}
-                  description={poem.data.description}
-                  date={poem.data.publishedAt}
-                  author={poem.data.author}
-                  href={`${base}poetry/${poem.id}/`}
-                  language={language}
-                  kind={language === 'ar' ? 'قصيدة' : 'Poem'}
-                  cover={poem.data.cover ? `${base}${poem.data.cover.src}` : undefined}
-                  coverAlt={poem.data.cover?.alt}
-                />
-              ))}
-            </div>
-          </section>
-        );
-      })}</>
+    {englishArticles.length > 0 ? (
+      <div class="entry-grid">
+        {englishArticles.map((article) => (
+          <EntryCard
+            title={article.data.title}
+            description={article.data.description}
+            date={article.data.publishedAt}
+            author={article.data.author}
+            href={`${base}articles/${article.id}/`}
+            language="en"
+            cover={article.data.cover ? `${base}${article.data.cover.src}` : undefined}
+            coverAlt={article.data.cover?.alt}
+          />
+        ))}
+      </div>
     ) : (
-      <p class="empty-state">ستُنشر القصيدة الأولى قريبًا.</p>
+      <p class="empty-state">The first English letter will be published soon.</p>
     )}
   </section>
     </>

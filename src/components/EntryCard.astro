@@ -7,13 +7,12 @@ interface Props {
   date: Date;
   author: string;
   href: string;
-  kind?: string;
   language: 'ar' | 'en';
   cover?: string;
   coverAlt?: string;
 }
 
-const { title, description, date, author, href, kind, language, cover, coverAlt } = Astro.props;
+const { title, description, date, author, href, language, cover, coverAlt } = Astro.props;
 const coverSmall = cover?.replace(/\.webp$/, '-768.webp');
 const showDescription = description.trim() !== title.trim();
 const formattedDate = new Intl.DateTimeFormat(language === 'ar' ? 'ar-JO' : 'en-GB', {
@@ -39,7 +38,6 @@ const formattedDate = new Intl.DateTimeFormat(language === 'ar' ? 'ar-JO' : 'en-
     </div>
   )}
   <div class="entry-card-body">
-    {kind && <p class="entry-kind">{kind}</p>}
     <h4><a href={href}>{title}</a></h4>
     {showDescription && <p>{description}</p>}
     <p class="entry-meta">
