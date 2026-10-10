@@ -260,7 +260,7 @@ h1, h2, h3 { color: var(--emerald-deep); line-height: 1.35; }
 .section-heading > span { color: var(--muted); font-size: .95rem; }
 .entry-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 1.25rem; }
 .entry-card { display: flex; flex-direction: column; overflow: hidden; background: linear-gradient(180deg, rgba(255, 255, 255, .035), transparent), var(--card); border: 1px solid var(--line); border-radius: 1rem; box-shadow: var(--shadow); }
-.entry-card-media { overflow: hidden; aspect-ratio: 3 / 2; background: var(--mint); border-bottom: 1px solid var(--line); }
+.entry-card-media { display: block; overflow: hidden; aspect-ratio: 3 / 2; background: var(--mint); border-bottom: 1px solid var(--line); }
 .entry-card-media img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .35s ease; }
 .entry-card:hover .entry-card-media img { transform: scale(1.025); }
 .entry-card-body { display: flex; flex: 1; flex-direction: column; padding: 1.35rem 1.5rem 1.5rem; }

@@ -24,7 +24,7 @@ const formattedDate = new Intl.DateTimeFormat(language === 'ar' ? 'ar-JO' : 'en-
 
 <article class="entry-card" lang={language} dir={language === 'ar' ? 'rtl' : 'ltr'}>
   {cover && (
-    <div class="entry-card-media">
+    <a class="entry-card-media" href={href} aria-label={title}>
       <img
         src={cover}
         srcset={coverSmall ? `${coverSmall} 768w, ${cover} 1536w` : undefined}
@@ -35,7 +35,7 @@ const formattedDate = new Intl.DateTimeFormat(language === 'ar' ? 'ar-JO' : 'en-
         loading="lazy"
         decoding="async"
       />
-    </div>
+    </a>
   )}
   <div class="entry-card-body">
     <h4><a href={href}>{title}</a></h4>
