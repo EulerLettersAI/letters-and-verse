@@ -1,0 +1,28 @@
+---
+interface Props {
+  author: string;
+  language: 'ar' | 'en';
+  publishedAt: Date;
+}
+
+const { author, language, publishedAt } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const year = publishedAt.getUTCFullYear();
+---
+
+<aside
+  class="copyright-notice"
+  lang={language}
+  dir={language === 'ar' ? 'rtl' : 'ltr'}
+  aria-label={language === 'ar' ? 'إشعار حقوق النشر' : 'Copyright notice'}
+>
+  <strong>© {year} <bdi>{author}</bdi>. {language === 'ar' ? 'جميع الحقوق محفوظة.' : 'All rights reserved.'}</strong>
+  <span>
+    {language === 'ar'
+      ? 'لا يجوز نسخ هذا النص أو إعادة نشره أو توزيعه أو ترجمته أو تعديله، كليًا أو جزئيًا، دون إذن كتابي مسبق من المؤلف، باستثناء ما يسمح به القانون.'
+      : 'This work may not be copied, republished, distributed, translated, or adapted, in whole or in part, without the author’s prior written permission, except as permitted by law.'}
+  </span>
+  <a href={`${base}copyright/`}>
+    {language === 'ar' ? 'شروط حقوق النشر' : 'Copyright terms'}
+  </a>
+</aside>

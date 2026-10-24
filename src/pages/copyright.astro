@@ -1,0 +1,30 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+---
+
+<SiteLayout
+  title="حقوق النشر | Copyright | رسائل وقصائد"
+  description="شروط حقوق النشر لمقالات وقصائد رسائل وقصائد. Copyright terms for Letters & Verse."
+>
+  <article class="prose-shell legal-page">
+    <a class="back-link" href={import.meta.env.BASE_URL}>← جميع النصوص</a>
+
+    <section class="prose" lang="ar" dir="rtl" aria-labelledby="copyright-ar">
+      <h1 id="copyright-ar">حقوق النشر</h1>
+      <p><strong>جميع الحقوق محفوظة لمؤلف كل نص.</strong></p>
+      <p>جميع المقالات والرسائل والقصائد وغيرها من النصوص الأدبية المنشورة في «رسائل وقصائد» محمية بحقوق النشر، وتعود حقوق كل نص إلى المؤلف المذكور في صفحته.</p>
+      <p>باستثناء ما يسمح به القانون، لا يُمنح أي شخص إذنًا بنسخ أي نص أو إعادة نشره أو توزيعه أو نقله أو ترجمته أو تعديله أو عرضه أو أدائه أو استغلاله تجاريًا، كليًا أو جزئيًا، ولا بجمعه لإعادة النشر أو إدراجه في مجموعة بيانات أو مواد تدريب للذكاء الاصطناعي، إلا بعد الحصول على إذن كتابي مسبق من مؤلفه.</p>
+      <p>لا يُعدّ إتاحة النص للقراءة أو إمكان تنزيله تقنيًا إذنًا بإعادة استخدامه. يجب توجيه طلب الإذن إلى المؤلف المذكور في النص.</p>
+      <p>قد تخضع الصور والخطوط والبرمجيات والمواد العائدة لأطراف أخرى لشروط وحقوق مختلفة تخص أصحابها.</p>
+    </section>
+
+    <section class="prose legal-english" lang="en" dir="ltr" aria-labelledby="copyright-en">
+      <h2 id="copyright-en">Copyright</h2>
+      <p><strong>All rights are reserved by each work’s author.</strong></p>
+      <p>Every article, letter, poem, and other literary work published on Letters &amp; Verse is protected by copyright. The rights in each work belong to the author named on its page.</p>
+      <p>Except where applicable law permits otherwise, no one may copy, reproduce, republish, distribute, transmit, translate, adapt, publicly display, publicly perform, commercially exploit, scrape for republication, or include any work, in whole or in part, in a dataset or artificial-intelligence training corpus without the author’s prior written permission.</p>
+      <p>Making a work available to read, or technically possible to download, does not grant permission to reuse it. Permission requests must be directed to the author named on the work.</p>
+      <p>Third-party images, fonts, software, and other materials may be subject to separate rights and terms belonging to their respective owners.</p>
+    </section>
+  </article>
+</SiteLayout>

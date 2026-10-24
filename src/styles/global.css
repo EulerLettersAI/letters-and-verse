@@ -324,8 +324,16 @@ h1, h2, h3 { color: var(--emerald-deep); line-height: 1.35; }
 .classical-poem .verse-divider { color: var(--gold); font-size: .55em; opacity: .8; }
 .stanza-art { width: min(82%, 440px); overflow: hidden; margin: 0 0 2.75rem auto; line-height: 0; background: var(--mint); border: 1px solid var(--line); border-radius: 1rem; box-shadow: var(--shadow); }
 .stanza-art img { width: 100%; height: auto; display: block; aspect-ratio: 3 / 2; object-fit: cover; }
+.copyright-notice { max-width: 780px; display: grid; gap: .35rem; margin: 4rem auto 0; padding: 1.25rem 1.4rem; color: var(--muted); font-size: .95rem; line-height: 1.75; background: rgba(215, 181, 109, .06); border: 1px solid color-mix(in srgb, var(--gold) 40%, var(--line)); border-radius: .85rem; }
+.copyright-notice strong { color: var(--ink); }
+.copyright-notice a { width: fit-content; color: var(--gold); font-weight: 700; text-underline-offset: .2em; }
+.legal-page { max-width: 860px; }
+.legal-page .prose { margin-top: 2.5rem; }
+.legal-page .prose h1, .legal-page .prose h2 { margin-bottom: 1.25rem; }
+.legal-english { margin-top: 4rem !important; padding-top: 3rem; font-family: 'EB Garamond', Georgia, 'Times New Roman', serif; border-top: 1px solid var(--line); }
 footer { color: var(--muted); background: var(--mint); border-top: 1px solid var(--line); }
 .footer-inner { display: flex; justify-content: space-between; padding-block: 1.5rem; font-size: .9rem; }
+.footer-copyright { display: grid; gap: .15rem; }
 .footer-inner a { color: var(--emerald); }
 @media (max-width: 700px) {
   .hero { padding: 1.5rem 16px; }

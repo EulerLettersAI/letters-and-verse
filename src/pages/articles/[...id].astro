@@ -3,6 +3,7 @@ import type { GetStaticPaths } from 'astro';
 import { getCollection, render } from 'astro:content';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import AuthorLink from '../../components/AuthorLink.astro';
+import CopyrightNotice from '../../components/CopyrightNotice.astro';
 
 export const getStaticPaths = (async () => {
   const entries = await getCollection('articles', ({ data }) => !data.draft);
@@ -72,5 +73,10 @@ const showDescription = entry.data.description.trim() !== entry.data.title.trim(
       )}
       <Content />
     </div>
+    <CopyrightNotice
+      author={entry.data.author}
+      language={entry.data.language}
+      publishedAt={entry.data.publishedAt}
+    />
   </article>
 </SiteLayout>
