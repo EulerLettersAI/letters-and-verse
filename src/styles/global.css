@@ -293,6 +293,7 @@ h1, h2, h3 { color: var(--emerald-deep); line-height: 1.35; }
 .article-header .title-explanation::before { content: ''; width: .65rem; height: .65rem; position: absolute; bottom: 100%; left: 50%; background: color-mix(in srgb, var(--card) 96%, black); border-top: 1px solid color-mix(in srgb, var(--gold) 55%, var(--line)); border-left: 1px solid color-mix(in srgb, var(--gold) 55%, var(--line)); transform: translate(-50%, 50%) rotate(45deg); }
 .title-with-note:hover > .title-explanation, .title-with-note:focus-within > .title-explanation, .title-with-note[open] > .title-explanation { opacity: 1; visibility: visible; pointer-events: auto; transform: translate(-50%, 0); }
 .article-header > p:not(.kicker) { color: var(--muted); }
+.article-header .arabic-author-byline { margin: -.1rem 0 .8rem; font-size: clamp(.95rem, 2vw, 1.1rem); font-weight: 600; }
 .article-header .poetry-type { margin: -.1rem 0 .8rem; color: var(--gold); font-size: clamp(.95rem, 2vw, 1.1rem); font-weight: 700; }
 .article-meta { display: flex; gap: 1.5rem; color: var(--muted); font-size: .95rem; }
 .entry-cover { width: min(100%, 560px); overflow: hidden; margin: 0 auto 2.5rem; background: var(--mint); border: 1px solid var(--line); border-radius: 1.25rem; box-shadow: var(--shadow); }

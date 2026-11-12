@@ -21,6 +21,7 @@ const videoPosterSrc = entry.data.video?.poster
   ? `${import.meta.env.BASE_URL}${entry.data.video.poster}`
   : coverSrc;
 const showDescription = entry.data.description.trim() !== entry.data.title.trim();
+const showArabicSamerByline = entry.data.language === 'ar' && entry.data.author === 'Samer Kababji';
 ---
 
 <SiteLayout
@@ -35,6 +36,7 @@ const showDescription = entry.data.description.trim() !== entry.data.title.trim(
     <header class="article-header">
       <p class="kicker">{entry.data.language === 'ar' ? 'رسالة' : 'Letter'}</p>
       <h1>{entry.data.title}</h1>
+      {showArabicSamerByline && <p class="arabic-author-byline">بقلم د. م. سامر الكبابجي</p>}
       {showDescription && <p>{entry.data.description}</p>}
       <div class="article-meta"><AuthorLink author={entry.data.author} /><time datetime={entry.data.publishedAt.toISOString()}>{date}</time></div>
     </header>
